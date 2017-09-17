@@ -1,0 +1,127 @@
+﻿<#@ Assembly Name="System.Core" #>
+<#@ Assembly Name="System.Data" #>
+<#@ Assembly Name="System.Windows.Forms" #>
+<#@ Assembly Name="Microsoft.Data.Sqlite.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #> 
+<#@ import namespace="Microsoft.Data.Sqlite" #> 
+
+<#+ 
+	class SqliteDbModelManager:IDisposable
+	{
+		private readonly SqliteConnection conn;
+        public SqliteDbModelManager (string connStr)
+        {
+			this.conn = new SqliteConnection(connStr);
+            if (conn.State != ConnectionState.Open)
+            {
+                conn.Open();
+            }
+        }
+
+		public void Dispose()
+        {
+            this.conn.Dispose();
+        }
+
+		public IList<TableModel> GetTables()
+        {
+            var list = new List<TableModel>();
+            using (var cmd = this.conn.CreateCommand())
+            {
+                cmd.CommandText = @"SELECT name
+                                  FROM sqlite_master
+                                 WHERE type = 'table' AND
+                                       name <> 'sqlite_sequence'; ";
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var tableName = reader.GetString(0);
+                        list.Add(new TableModel { Name = tableName });
+                    }
+                }
+            }
+            return list;
+        }
+
+		public IList<ColumnModel> GetColumns(string table)
+        {
+			var list = new List<ColumnModel>();
+            using (var cmd = this.conn.CreateCommand())
+            {
+                cmd.CommandText = @"PRAGMA table_info('"+table+"');";
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        list.Add(new ColumnModel 
+						{
+							Name = reader.GetString(1),
+							Type = GetCSharpType(reader.GetString(2)),
+							NotNull = reader.GetBoolean(3),
+							Pk = reader.GetBoolean(5),
+						});
+                    }
+                }
+            }
+            return list;
+		}
+
+
+		private string GetCSharpType(string dbType)
+		{
+			var result = "string";
+			dbType = dbType.ToUpper();
+            switch (dbType)
+            {
+				case "INTEGER":
+					return "int";
+                default:
+				return result;
+            }
+		}
+	}
+
+	class TableModel 
+	{
+        public string Name { get; set; }
+	}
+
+	class ColumnModel
+    {
+        public string Name { get; set; }
+
+        public string Type { get; set; }
+
+		public bool NotNull {get;set;}
+
+        public bool Pk { get; set; }
+	}
+#>
+
+<#+ 
+	public string GetClassName(string name,string prefix="Entity")
+	{
+        if (string.IsNullOrEmpty(name))
+        {
+			return name;
+        }
+		return name.Substring(0,1).ToUpper()+name.Remove(0,1)+prefix;
+	}
+
+	public string GetConnString(string name="")
+    {
+		SqliteConnectionStringBuilder sb = new SqliteConnectionStringBuilder();
+        if (string.IsNullOrEmpty(name))
+        {
+			sb.DataSource = "C:/Users/mrpen/Documents/Visual Studio 2017/Projects/Novel/Novel.Web/Data/novel.db";
+        }
+		return sb.ToString();
+    }
+#>
