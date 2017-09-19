@@ -86,9 +86,9 @@
 			dbType = dbType.ToUpper();
             switch (dbType)
             {
-				case "int":
+				case "INT":
 					return "int";
-				case "datetime":
+				case "DATETIME":
 					return "DateTime";
                 default:
 				return result;
