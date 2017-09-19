@@ -1,4 +1,6 @@
 using System;
+using System.Data;
+using System.Data.SqlClient;
 using Xunit;
 
 namespace Simple.Net.Template.Test
@@ -8,7 +10,6 @@ namespace Simple.Net.Template.Test
         [Fact]
         public void Test1()
         {
-
         }
     }
 }

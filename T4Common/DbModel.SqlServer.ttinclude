@@ -1,7 +1,6 @@
 ﻿<#@ Assembly Name="System.Core" #>
 <#@ Assembly Name="System.Data" #>
 <#@ Assembly Name="System.Windows.Forms" #>
-<#@ Assembly Name="Microsoft.Data.Sqlite.dll" #>
 <#@ import namespace="System" #>
 <#@ import namespace="System.Data" #>
 <#@ import namespace="System.IO" #>
@@ -9,15 +8,15 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Collections" #>
 <#@ import namespace="System.Collections.Generic" #> 
-<#@ import namespace="Microsoft.Data.Sqlite" #> 
+<#@ import namespace="System.Data.SqlClient" #> 
 
 <#+ 
-	class SqliteDbModelManager:IDisposable
+	class SqlServerDbModelManager:IDisposable
 	{
-		private readonly SqliteConnection conn;
-        public SqliteDbModelManager (string connStr)
+		private readonly SqlConnection conn;
+        public SqlServerDbModelManager (string connStr)
         {
-			this.conn = new SqliteConnection(connStr);
+			this.conn = new SqlConnection(connStr);
             if (conn.State != ConnectionState.Open)
             {
                 conn.Open();
@@ -34,10 +33,7 @@
             var list = new List<TableModel>();
             using (var cmd = this.conn.CreateCommand())
             {
-                cmd.CommandText = @"SELECT name
-                                  FROM sqlite_master
-                                 WHERE type = 'table' AND
-                                       name <> 'sqlite_sequence'; ";
+                cmd.CommandText = @" select [name] from sys.tables where [type]='U' ";
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
@@ -55,17 +51,27 @@
 			var list = new List<ColumnModel>();
             using (var cmd = this.conn.CreateCommand())
             {
-                cmd.CommandText = @"PRAGMA table_info('"+table+"');";
+                cmd.CommandText = string.Format(@"
+				select 
+					c.name TableName,
+					t.name TypeName,
+					c.is_nullable,
+					(case when k.COLUMN_NAME is null then 0 else 1 end) primaryKey
+					 from sys.columns c
+					 inner join sys.types t on C.system_type_id = t.system_type_id	and c.user_type_id = t.user_type_id
+					left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE k on c.name = k.COLUMN_NAME and k.TABLE_NAME = '{0}'
+				where object_id = OBJECT_ID('{0}')
+				",table);
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
                         list.Add(new ColumnModel 
 						{
-							Name = reader.GetString(1),
-							Type = GetCSharpType(reader.GetString(2)),
-							NotNull = reader.GetBoolean(3),
-							Pk = reader.GetBoolean(5),
+							Name = reader.GetString(0),
+							Type = GetCSharpType(reader.GetString(1)),
+							NotNull = reader.GetBoolean(2),
+							Pk = reader.GetInt32(3)>0,
 						});
                     }
                 }
@@ -80,8 +86,10 @@
 			dbType = dbType.ToUpper();
             switch (dbType)
             {
-				case "INTEGER":
+				case "int":
 					return "int";
+				case "datetime":
+					return "DateTime";
                 default:
 				return result;
             }
@@ -117,11 +125,6 @@
 
 	public string GetConnString(string name="")
     {
-		SqliteConnectionStringBuilder sb = new SqliteConnectionStringBuilder();
-        if (string.IsNullOrEmpty(name))
-        {
-			sb.DataSource = "C:/Users/mrpen/Documents/Visual Studio 2017/Projects/Novel/Novel.Web/Data/novel.db";
-        }
-		return sb.ToString();
+		return "Database=CRM_3410;User ID=sa;Password=daishu360!@#abc;Application Name=DaiShu-Crm-Api; Server=192.168.1.16;Connect Timeout=30;";
     }
 #>

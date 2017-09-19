@@ -1,0 +1,70 @@
+﻿<#@ template language="C#" debug="True" hostspecific="True" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Data" #>
+<#@ assembly name="System.xml" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System" #>
+<#@ include file="$(SolutionDir)\T4Common\ModelAuto.ttinclude"#>
+<#@ include file="$(SolutionDir)\T4Common\DbModel.SqlServer.ttinclude"#>
+<# 
+	var nameSpace = "Simple.Net.Template.Data.Entities";
+	var outputPath = Path.GetDirectoryName(Host.TemplateFile);
+#>
+<# var manager = new Manager(Host,GenerationEnvironment,true)
+	{
+		OutputPath = outputPath
+	};
+
+#>
+<# 
+	using (var dbManager = new SqlServerDbModelManager(GetConnString()))
+    {
+		var tables = dbManager.GetTables();
+        foreach (var item in tables)
+        {
+            var className = GetClassName(item.Name);
+#>
+<# manager.StartBlock(className+".cs"); #>
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Dapper.Contrib.Extensions;
+
+<#
+	var columns = dbManager.GetColumns(item.Name);
+#>
+
+namespace <#= nameSpace #>
+{
+	[Table("<#= item.Name #>")]
+	public partial class <#= className #> : BaseEntity
+	{
+<#
+	
+    foreach (var column in columns)
+    {
+#>
+<# if (column.Pk)
+   {
+#>
+ 		 public override int Key
+         {
+             get => this.<#= column.Name #>;
+             set => this.<#= column.Name #> = value;
+         }	
+
+		 [Key]
+<# } #>
+		 public <#= column.Type #> <#= column.Name #> {get;set;}
+
+<#  } 
+#>
+	}
+}
+<# manager.EndBlock(); #>
+<#
+        }
+	}
+#>
+<# manager.Process(true); #>
