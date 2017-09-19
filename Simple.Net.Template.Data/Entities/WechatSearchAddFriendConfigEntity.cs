@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WechatSearchAddFriendConfig")]
-	public partial class WechatSearchAddFriendConfigEntity : BaseEntity
+	public partial class WechatSearchAddFriendConfigEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.WechatSearchAddFriendConfigId;
              set => this.WechatSearchAddFriendConfigId = value;

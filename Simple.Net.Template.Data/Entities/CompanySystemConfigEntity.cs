@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("CompanySystemConfig")]
-	public partial class CompanySystemConfigEntity : BaseEntity
+	public partial class CompanySystemConfigEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.CompanySystemConfigID;
              set => this.CompanySystemConfigID = value;

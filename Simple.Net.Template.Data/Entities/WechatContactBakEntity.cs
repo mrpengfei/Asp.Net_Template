@@ -7,7 +7,7 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WechatContactBak")]
-	public partial class WechatContactBakEntity : BaseEntity
+	public partial class WechatContactBakEntity : BaseEntity<int>
 	{
 		 public string WechatContactBakId {get;set;}
 

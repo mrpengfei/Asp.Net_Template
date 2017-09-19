@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ContactTypeActionMapping")]
-	public partial class ContactTypeActionMappingEntity : BaseEntity
+	public partial class ContactTypeActionMappingEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.ContactTypeActionMappingID;
              set => this.ContactTypeActionMappingID = value;

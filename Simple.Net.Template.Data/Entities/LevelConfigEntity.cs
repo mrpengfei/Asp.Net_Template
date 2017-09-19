@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("LevelConfig")]
-	public partial class LevelConfigEntity : BaseEntity
+	public partial class LevelConfigEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.LevelConfigId;
              set => this.LevelConfigId = value;

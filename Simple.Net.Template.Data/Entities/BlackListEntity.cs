@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("BlackList")]
-	public partial class BlackListEntity : BaseEntity
+	public partial class BlackListEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.ID;
              set => this.ID = value;

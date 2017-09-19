@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserRisk")]
-	public partial class UserRiskEntity : BaseEntity
+	public partial class UserRiskEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.UserID;
              set => this.UserID = value;
@@ -18,7 +18,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string UserID {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.RiskTypeId;
              set => this.RiskTypeId = value;

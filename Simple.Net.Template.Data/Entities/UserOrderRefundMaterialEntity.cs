@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserOrderRefundMaterial")]
-	public partial class UserOrderRefundMaterialEntity : BaseEntity
+	public partial class UserOrderRefundMaterialEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.UserOrderRefundMaterialId;
              set => this.UserOrderRefundMaterialId = value;
@@ -22,7 +22,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string UserOrderRefundId {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.MaterialTypeId;
              set => this.MaterialTypeId = value;

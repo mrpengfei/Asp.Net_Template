@@ -7,7 +7,7 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WechatResourceStepLog_bak")]
-	public partial class WechatResourceStepLog_bakEntity : BaseEntity
+	public partial class WechatResourceStepLog_bakEntity : BaseEntity<int>
 	{
 		 public string WechatResourceStepLogId {get;set;}
 

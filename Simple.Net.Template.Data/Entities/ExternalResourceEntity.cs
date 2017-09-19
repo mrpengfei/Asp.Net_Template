@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ExternalResource")]
-	public partial class ExternalResourceEntity : BaseEntity
+	public partial class ExternalResourceEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.ExternalResourceId;
              set => this.ExternalResourceId = value;

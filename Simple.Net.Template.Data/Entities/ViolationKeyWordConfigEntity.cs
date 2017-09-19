@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ViolationKeyWordConfig")]
-	public partial class ViolationKeyWordConfigEntity : BaseEntity
+	public partial class ViolationKeyWordConfigEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.ViolationKeyWordId;
              set => this.ViolationKeyWordId = value;

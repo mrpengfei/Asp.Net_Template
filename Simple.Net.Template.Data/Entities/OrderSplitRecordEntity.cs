@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("OrderSplitRecord")]
-	public partial class OrderSplitRecordEntity : BaseEntity
+	public partial class OrderSplitRecordEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.OrderSplitRecordId;
              set => this.OrderSplitRecordId = value;
@@ -18,7 +18,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string OrderSplitRecordId {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.UserOrderNo;
              set => this.UserOrderNo = value;

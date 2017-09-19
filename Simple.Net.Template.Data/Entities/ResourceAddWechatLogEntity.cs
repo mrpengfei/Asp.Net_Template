@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ResourceAddWechatLog")]
-	public partial class ResourceAddWechatLogEntity : BaseEntity
+	public partial class ResourceAddWechatLogEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.ResourceAddWechatLogId;
              set => this.ResourceAddWechatLogId = value;

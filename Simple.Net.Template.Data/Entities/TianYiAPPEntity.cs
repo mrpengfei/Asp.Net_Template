@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("TianYiAPP")]
-	public partial class TianYiAPPEntity : BaseEntity
+	public partial class TianYiAPPEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.TianYiAPPId;
              set => this.TianYiAPPId = value;

@@ -33,12 +33,17 @@ using Dapper.Contrib.Extensions;
 
 <#
 	var columns = dbManager.GetColumns(item.Name);
+	var pkColumn = columns.FirstOrDefault(p=>p.Pk);
+	var pkType = "int";
+	if(pkColumn != null){
+		pkType = pkColumn.Type;
+	}
 #>
 
 namespace <#= nameSpace #>
 {
 	[Table("<#= item.Name #>")]
-	public partial class <#= className #> : BaseEntity
+	public partial class <#= className #> : BaseEntity<<#= pkType #>>
 	{
 <#
 	
@@ -48,7 +53,7 @@ namespace <#= nameSpace #>
 <# if (column.Pk)
    {
 #>
- 		 public override int Key
+ 		 public override <#= pkType #> Key
          {
              get => this.<#= column.Name #>;
              set => this.<#= column.Name #> = value;

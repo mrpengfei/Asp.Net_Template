@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WaitRemark")]
-	public partial class WaitRemarkEntity : BaseEntity
+	public partial class WaitRemarkEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.WaitRemarkId;
              set => this.WaitRemarkId = value;

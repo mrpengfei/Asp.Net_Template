@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ChatMessageConfig")]
-	public partial class ChatMessageConfigEntity : BaseEntity
+	public partial class ChatMessageConfigEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.ChatMessageId;
              set => this.ChatMessageId = value;

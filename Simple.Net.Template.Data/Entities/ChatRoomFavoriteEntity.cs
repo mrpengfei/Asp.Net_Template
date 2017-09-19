@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ChatRoomFavorite")]
-	public partial class ChatRoomFavoriteEntity : BaseEntity
+	public partial class ChatRoomFavoriteEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.ChatRoomFavoriteId;
              set => this.ChatRoomFavoriteId = value;

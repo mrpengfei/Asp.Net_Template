@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserInAccountApply")]
-	public partial class UserInAccountApplyEntity : BaseEntity
+	public partial class UserInAccountApplyEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.UserInAccountApplyId;
              set => this.UserInAccountApplyId = value;
@@ -18,7 +18,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string UserInAccountApplyId {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.AccountTypeId;
              set => this.AccountTypeId = value;
@@ -31,7 +31,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string UserId {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.ApplyStateId;
              set => this.ApplyStateId = value;

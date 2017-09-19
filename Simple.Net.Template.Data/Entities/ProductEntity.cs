@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("Product")]
-	public partial class ProductEntity : BaseEntity
+	public partial class ProductEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.ProductId;
              set => this.ProductId = value;
@@ -18,7 +18,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string ProductId {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.CompanyID;
              set => this.CompanyID = value;
@@ -35,7 +35,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string ProductCycle {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.ProductCategoryId;
              set => this.ProductCategoryId = value;

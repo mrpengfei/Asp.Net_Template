@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WechatContactMongo")]
-	public partial class WechatContactMongoEntity : BaseEntity
+	public partial class WechatContactMongoEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.WechatContactMongoId;
              set => this.WechatContactMongoId = value;

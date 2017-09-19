@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserOrderRefundLog")]
-	public partial class UserOrderRefundLogEntity : BaseEntity
+	public partial class UserOrderRefundLogEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.UserOrderRefundLogId;
              set => this.UserOrderRefundLogId = value;
@@ -18,7 +18,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string UserOrderRefundLogId {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.UserOrderRefundId;
              set => this.UserOrderRefundId = value;
@@ -27,7 +27,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string UserOrderRefundId {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.UserOrderNo;
              set => this.UserOrderNo = value;
@@ -36,7 +36,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string UserOrderNo {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.EmployeeID;
              set => this.EmployeeID = value;
@@ -45,7 +45,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string EmployeeID {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.OldUserOrderRefundStateId;
              set => this.OldUserOrderRefundStateId = value;
@@ -54,7 +54,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string OldUserOrderRefundStateId {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.NewUserOrderRefundStateId;
              set => this.NewUserOrderRefundStateId = value;

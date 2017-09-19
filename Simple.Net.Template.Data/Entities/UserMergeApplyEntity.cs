@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserMergeApply")]
-	public partial class UserMergeApplyEntity : BaseEntity
+	public partial class UserMergeApplyEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.id;
              set => this.id = value;

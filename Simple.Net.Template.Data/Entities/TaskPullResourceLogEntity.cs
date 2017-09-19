@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("TaskPullResourceLog")]
-	public partial class TaskPullResourceLogEntity : BaseEntity
+	public partial class TaskPullResourceLogEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.TaskPullResourceLogId;
              set => this.TaskPullResourceLogId = value;

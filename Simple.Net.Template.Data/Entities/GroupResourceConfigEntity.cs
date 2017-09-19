@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("GroupResourceConfig")]
-	public partial class GroupResourceConfigEntity : BaseEntity
+	public partial class GroupResourceConfigEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.GroupResourceConfigId;
              set => this.GroupResourceConfigId = value;

@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserOrder")]
-	public partial class UserOrderEntity : BaseEntity
+	public partial class UserOrderEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.UserOrderNo;
              set => this.UserOrderNo = value;
@@ -18,7 +18,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string UserOrderNo {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.UserID;
              set => this.UserID = value;
@@ -27,7 +27,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string UserID {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.ProduCategoryId;
              set => this.ProduCategoryId = value;
@@ -36,7 +36,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string ProduCategoryId {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.ProductId;
              set => this.ProductId = value;
@@ -45,7 +45,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string ProductId {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.OrderTypeId;
              set => this.OrderTypeId = value;
@@ -58,7 +58,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string Description {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.OrderStateId;
              set => this.OrderStateId = value;
@@ -73,7 +73,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string OrderTruePrice {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.PaymentTypeId;
              set => this.PaymentTypeId = value;
@@ -82,7 +82,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string PaymentTypeId {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.EmployeeId;
              set => this.EmployeeId = value;
@@ -121,7 +121,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string IsCloseOldAuthorization {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.OriginOrderProductCategoryId;
              set => this.OriginOrderProductCategoryId = value;
@@ -154,7 +154,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string RefundMoney {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.RefundStateId;
              set => this.RefundStateId = value;

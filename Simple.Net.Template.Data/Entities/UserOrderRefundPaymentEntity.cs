@@ -7,11 +7,11 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserOrderRefundPayment")]
-	public partial class UserOrderRefundPaymentEntity : BaseEntity
+	public partial class UserOrderRefundPaymentEntity : BaseEntity<string>
 	{
 		 public string UserOrderRefundId {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.PaymentTypeId;
              set => this.PaymentTypeId = value;
@@ -36,7 +36,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string PaymentMoney {get;set;}
 
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.UserOrderRefundPaymentId;
              set => this.UserOrderRefundPaymentId = value;

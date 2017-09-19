@@ -7,9 +7,9 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("FastReplyGroupConfig")]
-	public partial class FastReplyGroupConfigEntity : BaseEntity
+	public partial class FastReplyGroupConfigEntity : BaseEntity<string>
 	{
- 		 public override int Key
+ 		 public override string Key
          {
              get => this.ReplyGroupId;
              set => this.ReplyGroupId = value;

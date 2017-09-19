@@ -7,7 +7,7 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("Users_2o170801")]
-	public partial class Users_2o170801Entity : BaseEntity
+	public partial class Users_2o170801Entity : BaseEntity<int>
 	{
 		 public string UserID {get;set;}
 
