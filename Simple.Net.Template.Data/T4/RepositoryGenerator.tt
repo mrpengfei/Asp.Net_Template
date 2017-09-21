@@ -6,10 +6,10 @@
 <#@ import namespace="System.Data" #>
 <#@ import namespace="System" #>
 <#@ include file="$(SolutionDir)\T4Common\ModelAuto.ttinclude"#>
-<#@ include file="$(SolutionDir)\T4Common\DbModel.ttinclude"#>
+<#@ include file="$(SolutionDir)\T4Common\DbModel.SqlServer.ttinclude"#>
 <# 
-	var nameSpace = "Novel.Core.Dapper.Repository";
-	var outputPath = Path.GetDirectoryName(Path.GetDirectoryName(Host.TemplateFile))+"\\Repository\\Partials";
+	var nameSpace = "Novel.Core.Repository";
+	var outputPath = Path.GetDirectoryName(Path.GetDirectoryName(Host.TemplateFile))+"\\IRepositories\\Partials";
 #>
 <# var manager = new Manager(Host,GenerationEnvironment,true)
 	{
@@ -18,7 +18,7 @@
 
 #>
 <# 
-	using (var dbManager = new SqliteDbModelManager(GetConnString()))
+	using (var dbManager = new SqlServerDbModelManager(GetConnString()))
     {
 		var tables = dbManager.GetTables();
         foreach (var item in tables)
@@ -26,22 +26,18 @@
             var className = GetClassName(item.Name,"Repository");
 			var entityName = GetClassName(item.Name);
 #>
-<# manager.StartBlock(className+".cs"); #>
+<# manager.StartBlock("I"+className+".cs"); #>
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Dapper.Contrib.Extensions;
-using Novel.Core.Entities;
-using Novel.Core.Repository;
+using Simple.Net.Template.Data.Entities;
 
 
 namespace <#= nameSpace #>
 {
-	public partial class <#= className #> :DapperRepository<<#= entityName #>>, I<#= className #>
+	public partial interface I<#= className #> : IRepository<<#= entityName #>>
 	{
-		public <#= className #>(ISessionManager session) : base(session)
-        {
-        }
 	}
 }
 <# manager.EndBlock(); #>

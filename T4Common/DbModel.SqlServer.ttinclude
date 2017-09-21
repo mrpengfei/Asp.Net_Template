@@ -80,19 +80,30 @@
 		}
 
 
-		private string GetCSharpType(string dbType)
+		private string GetCSharpType(string dbType,bool notNull=true)
 		{
 			var result = "string";
-			dbType = dbType.ToUpper();
             switch (dbType)
             {
-				case "INT":
-					return "int";
-				case "DATETIME":
-					return "DateTime";
+				case "int":
+					return IsNullType("int",notNull);
+				case "datetime":
+					return IsNullType("DateTime",notNull);
+				case "decimal":
+					return IsNullType("decimal",notNull);
+				case "bit":
+					return IsNullType("bool",notNull);
                 default:
 				return result;
             }
+		}
+
+		private string IsNullType(string type,bool notNull=true){
+            if (notNull)
+            {
+				return type;
+            }
+			return type+"?";
 		}
 	}
 
