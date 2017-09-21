@@ -22,7 +22,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string TrueName {get;set;}
 
-		 public string Age {get;set;}
+		 public int Age {get;set;}
 
 		 public string Province {get;set;}
 
@@ -30,19 +30,19 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string Address {get;set;}
 
-		 public string Gender {get;set;}
+		 public int Gender {get;set;}
 
 		 public string Job {get;set;}
 
-		 public string OperatorID {get;set;}
+		 public int OperatorID {get;set;}
 
-		 public string UserTypeID {get;set;}
+		 public int UserTypeID {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string Updatetime {get;set;}
+		 public DateTime Updatetime {get;set;}
 
-		 public string LastCallTime {get;set;}
+		 public DateTime LastCallTime {get;set;}
 
 		 public string UserFrom {get;set;}
 
@@ -59,6 +59,22 @@ namespace Simple.Net.Template.Data.Entities
 		 public string SecondOprator {get;set;}
 
 		 public string QQNumber {get;set;}
+
+		 public int ResourceID {get;set;}
+
+		 public string Mobile {get;set;}
+
+		 public string Mobile2 {get;set;}
+
+		 public string Telephone {get;set;}
+
+		 public string Wechat {get;set;}
+
+		 public string Email {get;set;}
+
+		 public string CompanyName {get;set;}
+
+		 public string CompanyPosition {get;set;}
 
 	}
 }

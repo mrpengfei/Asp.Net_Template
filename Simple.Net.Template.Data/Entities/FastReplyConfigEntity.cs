@@ -7,18 +7,18 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("FastReplyConfig")]
-	public partial class FastReplyConfigEntity : BaseEntity<string>
+	public partial class FastReplyConfigEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.FastReplyId;
              set => this.FastReplyId = value;
          }	
 
 		 [Key]
-		 public string FastReplyId {get;set;}
+		 public int FastReplyId {get;set;}
 
-		 public string ReplyGroupId {get;set;}
+		 public int ReplyGroupId {get;set;}
 
 		 public string FastReplyContent {get;set;}
 
@@ -26,13 +26,13 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string DelStatus {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 		 public string StaffId {get;set;}
 
-		 public string ReplyType {get;set;}
+		 public int ReplyType {get;set;}
 
 	}
 }

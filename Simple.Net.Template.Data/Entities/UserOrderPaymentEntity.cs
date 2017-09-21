@@ -7,18 +7,18 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserOrderPayment")]
-	public partial class UserOrderPaymentEntity : BaseEntity<string>
+	public partial class UserOrderPaymentEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.UserOrderPaymentId;
              set => this.UserOrderPaymentId = value;
          }	
 
 		 [Key]
-		 public string UserOrderPaymentId {get;set;}
+		 public int UserOrderPaymentId {get;set;}
 
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.UserOrderNo;
              set => this.UserOrderNo = value;
@@ -27,37 +27,37 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string UserOrderNo {get;set;}
 
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.PaymentTypeId;
              set => this.PaymentTypeId = value;
          }	
 
 		 [Key]
-		 public string PaymentTypeId {get;set;}
+		 public int PaymentTypeId {get;set;}
 
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.PaymentBankId;
              set => this.PaymentBankId = value;
          }	
 
 		 [Key]
-		 public string PaymentBankId {get;set;}
+		 public int PaymentBankId {get;set;}
 
 		 public string PaymentMoney {get;set;}
 
 		 public string TradeNo {get;set;}
 
-		 public string PaymentTime {get;set;}
+		 public DateTime PaymentTime {get;set;}
 
 		 public string ReceiveMoney {get;set;}
 
-		 public string ReceiveTime {get;set;}
+		 public DateTime ReceiveTime {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 	}
 }

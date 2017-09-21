@@ -7,16 +7,16 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserInfo")]
-	public partial class UserInfoEntity : BaseEntity<string>
+	public partial class UserInfoEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.UserInfoId;
              set => this.UserInfoId = value;
          }	
 
 		 [Key]
-		 public string UserInfoId {get;set;}
+		 public int UserInfoId {get;set;}
 
 		 public string UserId {get;set;}
 
@@ -28,13 +28,13 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string WechatNo {get;set;}
 
-		 public string CeateDate {get;set;}
+		 public DateTime CeateDate {get;set;}
 
-		 public string UpdateDate {get;set;}
+		 public DateTime UpdateDate {get;set;}
 
 		 public string TrueName {get;set;}
 
-		 public string Gender {get;set;}
+		 public int Gender {get;set;}
 
 		 public string Email {get;set;}
 

@@ -18,17 +18,17 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string ResourceTrackID {get;set;}
 
-		 public string ResourceID {get;set;}
+		 public int ResourceID {get;set;}
 
-		 public string BeforeEmployeeID {get;set;}
+		 public int BeforeEmployeeID {get;set;}
 
-		 public string BeforeGroupID {get;set;}
+		 public int BeforeGroupID {get;set;}
 
 		 public string BeforeUserType {get;set;}
 
-		 public string AfterEmployeeID {get;set;}
+		 public int AfterEmployeeID {get;set;}
 
-		 public string AfterGroupID {get;set;}
+		 public int AfterGroupID {get;set;}
 
 		 public string AfterUserType {get;set;}
 
@@ -36,15 +36,23 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string AfterResourceType {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
-		 public string OperatorID {get;set;}
+		 public int OperatorID {get;set;}
 
 		 public string IpAddress {get;set;}
 
 		 public string ChangeReason {get;set;}
+
+		 public int BeforeDepartmentID {get;set;}
+
+		 public int BeforeCompanyID {get;set;}
+
+		 public int AfterDepartmentID {get;set;}
+
+		 public int AfterCompanyID {get;set;}
 
 	}
 }

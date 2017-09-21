@@ -7,43 +7,43 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserOrderRefundPayment")]
-	public partial class UserOrderRefundPaymentEntity : BaseEntity<string>
+	public partial class UserOrderRefundPaymentEntity : BaseEntity<int>
 	{
-		 public string UserOrderRefundId {get;set;}
-
- 		 public override string Key
-         {
-             get => this.PaymentTypeId;
-             set => this.PaymentTypeId = value;
-         }	
-
-		 [Key]
-		 public string PaymentTypeId {get;set;}
-
-		 public string PaymentName {get;set;}
-
-		 public string PaymentAccount {get;set;}
-
-		 public string EmployeeId {get;set;}
-
-		 public string PaymentDate {get;set;}
-
-		 public string CreateDate {get;set;}
-
-		 public string UpdateDate {get;set;}
-
-		 public string Remark {get;set;}
-
-		 public string PaymentMoney {get;set;}
-
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.UserOrderRefundPaymentId;
              set => this.UserOrderRefundPaymentId = value;
          }	
 
 		 [Key]
-		 public string UserOrderRefundPaymentId {get;set;}
+		 public int UserOrderRefundPaymentId {get;set;}
+
+		 public int UserOrderRefundId {get;set;}
+
+ 		 public override int Key
+         {
+             get => this.PaymentTypeId;
+             set => this.PaymentTypeId = value;
+         }	
+
+		 [Key]
+		 public int PaymentTypeId {get;set;}
+
+		 public string PaymentName {get;set;}
+
+		 public string PaymentAccount {get;set;}
+
+		 public int EmployeeId {get;set;}
+
+		 public DateTime PaymentDate {get;set;}
+
+		 public DateTime CreateDate {get;set;}
+
+		 public DateTime UpdateDate {get;set;}
+
+		 public string Remark {get;set;}
+
+		 public string PaymentMoney {get;set;}
 
 	}
 }

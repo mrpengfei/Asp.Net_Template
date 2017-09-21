@@ -7,24 +7,24 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ResourceTypeGroupDistributeConfig")]
-	public partial class ResourceTypeGroupDistributeConfigEntity : BaseEntity<string>
+	public partial class ResourceTypeGroupDistributeConfigEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.ResourceTypeGroupDistributeConfigID;
              set => this.ResourceTypeGroupDistributeConfigID = value;
          }	
 
 		 [Key]
-		 public string ResourceTypeGroupDistributeConfigID {get;set;}
+		 public int ResourceTypeGroupDistributeConfigID {get;set;}
 
-		 public string ResourceSubTypeID {get;set;}
+		 public int ResourceSubTypeID {get;set;}
 
-		 public string GroupID {get;set;}
+		 public int GroupID {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 	}
 }

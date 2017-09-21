@@ -7,24 +7,24 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("PublicResources")]
-	public partial class PublicResourcesEntity : BaseEntity<string>
+	public partial class PublicResourcesEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.ID;
              set => this.ID = value;
          }	
 
 		 [Key]
-		 public string ID {get;set;}
+		 public int ID {get;set;}
 
-		 public string ResourceID {get;set;}
+		 public int ResourceID {get;set;}
 
-		 public string LastEmployeeID {get;set;}
+		 public int LastEmployeeID {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 	}
 }

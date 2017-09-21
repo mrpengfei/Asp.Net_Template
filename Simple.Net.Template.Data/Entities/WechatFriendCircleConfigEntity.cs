@@ -7,28 +7,28 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WechatFriendCircleConfig")]
-	public partial class WechatFriendCircleConfigEntity : BaseEntity<string>
+	public partial class WechatFriendCircleConfigEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.FriendCircleId;
              set => this.FriendCircleId = value;
          }	
 
 		 [Key]
-		 public string FriendCircleId {get;set;}
+		 public int FriendCircleId {get;set;}
 
 		 public string Content {get;set;}
 
 		 public string PicUrl {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
-		 public string SendTime {get;set;}
+		 public DateTime SendTime {get;set;}
 
-		 public string Statue {get;set;}
+		 public int Statue {get;set;}
 
 		 public string WechatNoInfo {get;set;}
 

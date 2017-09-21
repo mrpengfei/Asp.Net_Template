@@ -7,16 +7,16 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("CallInfo")]
-	public partial class CallInfoEntity : BaseEntity<string>
+	public partial class CallInfoEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.CallInfoID;
              set => this.CallInfoID = value;
          }	
 
 		 [Key]
-		 public string CallInfoID {get;set;}
+		 public int CallInfoID {get;set;}
 
 		 public string CallID {get;set;}
 
@@ -36,21 +36,19 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string IsMulti {get;set;}
 
-		 public string CallStart {get;set;}
+		 public DateTime CallStart {get;set;}
 
-		 public string CallEnd {get;set;}
+		 public DateTime CallEnd {get;set;}
 
-		 public string Duration {get;set;}
+		 public int Duration {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 		 public string RoleName {get;set;}
 
 		 public string BCRecID {get;set;}
-
-		 public string RecordAddress {get;set;}
 
 	}
 }

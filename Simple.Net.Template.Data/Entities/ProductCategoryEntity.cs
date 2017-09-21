@@ -7,25 +7,25 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ProductCategory")]
-	public partial class ProductCategoryEntity : BaseEntity<string>
+	public partial class ProductCategoryEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.ProductCategoryId;
              set => this.ProductCategoryId = value;
          }	
 
 		 [Key]
-		 public string ProductCategoryId {get;set;}
+		 public int ProductCategoryId {get;set;}
 
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.CompanyID;
              set => this.CompanyID = value;
          }	
 
 		 [Key]
-		 public string CompanyID {get;set;}
+		 public int CompanyID {get;set;}
 
 		 public string ProductCategoryName {get;set;}
 
@@ -35,7 +35,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string IsDeleted {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
 	}
 }

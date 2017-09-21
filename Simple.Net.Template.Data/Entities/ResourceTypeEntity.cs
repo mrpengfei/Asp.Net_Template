@@ -7,26 +7,26 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ResourceType")]
-	public partial class ResourceTypeEntity : BaseEntity<string>
+	public partial class ResourceTypeEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.ID;
              set => this.ID = value;
          }	
 
 		 [Key]
-		 public string ID {get;set;}
+		 public int ID {get;set;}
 
 		 public string ResourceTypeName {get;set;}
 
 		 public string Description {get;set;}
 
-		 public string CompanyID {get;set;}
+		 public int CompanyID {get;set;}
 
-		 public string IsOnline {get;set;}
+		 public int IsOnline {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
 	}
 }

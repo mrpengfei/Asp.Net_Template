@@ -7,16 +7,16 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserOrderInAccountRecord")]
-	public partial class UserOrderInAccountRecordEntity : BaseEntity<string>
+	public partial class UserOrderInAccountRecordEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.UserOrderInAccountRecordId;
              set => this.UserOrderInAccountRecordId = value;
          }	
 
 		 [Key]
-		 public string UserOrderInAccountRecordId {get;set;}
+		 public int UserOrderInAccountRecordId {get;set;}
 
 		 public string UserOrderNo {get;set;}
 
@@ -24,18 +24,18 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string ApplyMoney {get;set;}
 
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.AccountTypeId;
              set => this.AccountTypeId = value;
          }	
 
 		 [Key]
-		 public string AccountTypeId {get;set;}
+		 public int AccountTypeId {get;set;}
 
 		 public string AccountMoney {get;set;}
 
-		 public string TransferDate {get;set;}
+		 public DateTime TransferDate {get;set;}
 
 		 public string TransferName {get;set;}
 
@@ -43,11 +43,11 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string Description {get;set;}
 
-		 public string CreateDate {get;set;}
+		 public DateTime CreateDate {get;set;}
 
-		 public string UpdateDate {get;set;}
+		 public DateTime UpdateDate {get;set;}
 
-		 public string UserOrderInAccountApplyId {get;set;}
+		 public int UserOrderInAccountApplyId {get;set;}
 
 	}
 }

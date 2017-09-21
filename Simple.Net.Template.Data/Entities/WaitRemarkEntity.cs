@@ -7,16 +7,16 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WaitRemark")]
-	public partial class WaitRemarkEntity : BaseEntity<string>
+	public partial class WaitRemarkEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.WaitRemarkId;
              set => this.WaitRemarkId = value;
          }	
 
 		 [Key]
-		 public string WaitRemarkId {get;set;}
+		 public int WaitRemarkId {get;set;}
 
 		 public string UserId {get;set;}
 
@@ -26,7 +26,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string Username {get;set;}
 
-		 public string State {get;set;}
+		 public int State {get;set;}
 
 	}
 }

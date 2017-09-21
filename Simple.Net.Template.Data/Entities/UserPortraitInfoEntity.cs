@@ -7,24 +7,24 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserPortraitInfo")]
-	public partial class UserPortraitInfoEntity : BaseEntity<string>
+	public partial class UserPortraitInfoEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.UserPortraitInfoId;
              set => this.UserPortraitInfoId = value;
          }	
 
 		 [Key]
-		 public string UserPortraitInfoId {get;set;}
+		 public int UserPortraitInfoId {get;set;}
 
-		 public string UserPortraitConfigId {get;set;}
+		 public int UserPortraitConfigId {get;set;}
 
 		 public string PortraitInfo {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 		 public string WxUin {get;set;}
 

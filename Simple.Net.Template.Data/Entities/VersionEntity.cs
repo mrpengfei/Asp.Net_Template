@@ -7,22 +7,22 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("Version")]
-	public partial class VersionEntity : BaseEntity<string>
+	public partial class VersionEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.VersionId;
              set => this.VersionId = value;
          }	
 
 		 [Key]
-		 public string VersionId {get;set;}
+		 public int VersionId {get;set;}
 
 		 public string VersionNumber {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 	}
 }

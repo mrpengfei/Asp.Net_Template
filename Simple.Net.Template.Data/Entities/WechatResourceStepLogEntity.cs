@@ -7,20 +7,20 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WechatResourceStepLog")]
-	public partial class WechatResourceStepLogEntity : BaseEntity<string>
+	public partial class WechatResourceStepLogEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.WechatResourceStepLogId;
              set => this.WechatResourceStepLogId = value;
          }	
 
 		 [Key]
-		 public string WechatResourceStepLogId {get;set;}
+		 public int WechatResourceStepLogId {get;set;}
 
 		 public string WxUin {get;set;}
 
-		 public string ResourceId {get;set;}
+		 public int ResourceId {get;set;}
 
 		 public string IsPull {get;set;}
 
@@ -34,33 +34,33 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string IsAddBlackList {get;set;}
 
-		 public string PullTime {get;set;}
+		 public DateTime PullTime {get;set;}
 
-		 public string AddWechatApplyTime {get;set;}
+		 public DateTime AddWechatApplyTime {get;set;}
 
-		 public string AddWechatSuccessTime {get;set;}
+		 public DateTime AddWechatSuccessTime {get;set;}
 
-		 public string DeleteWechatTime {get;set;}
+		 public DateTime DeleteWechatTime {get;set;}
 
-		 public string AddBlackListTime {get;set;}
+		 public DateTime AddBlackListTime {get;set;}
 
-		 public string LastRelationTime {get;set;}
+		 public DateTime LastRelationTime {get;set;}
 
-		 public string LastSendMessageTime {get;set;}
+		 public DateTime LastSendMessageTime {get;set;}
 
-		 public string LastAcceptMessageTime {get;set;}
+		 public DateTime LastAcceptMessageTime {get;set;}
 
-		 public string EmployeeId {get;set;}
+		 public int EmployeeId {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
-		 public string AddType {get;set;}
+		 public int AddType {get;set;}
 
 		 public string IsHandle {get;set;}
 
-		 public string HandleTime {get;set;}
+		 public DateTime HandleTime {get;set;}
 
 	}
 }

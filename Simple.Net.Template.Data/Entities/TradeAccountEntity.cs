@@ -7,18 +7,18 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("TradeAccount")]
-	public partial class TradeAccountEntity : BaseEntity<string>
+	public partial class TradeAccountEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.TradeAccountID;
              set => this.TradeAccountID = value;
          }	
 
 		 [Key]
-		 public string TradeAccountID {get;set;}
+		 public int TradeAccountID {get;set;}
 
-		 public string ExchangeID {get;set;}
+		 public int ExchangeID {get;set;}
 
 		 public string UserID {get;set;}
 
@@ -26,23 +26,23 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string RealAccount {get;set;}
 
-		 public string VirtualCTime {get;set;}
+		 public DateTime VirtualCTime {get;set;}
 
-		 public string RealCTime {get;set;}
+		 public DateTime RealCTime {get;set;}
 
-		 public string Fund {get;set;}
+		 public int Fund {get;set;}
 
-		 public string ActivateTime {get;set;}
+		 public DateTime ActivateTime {get;set;}
 
 		 public string UserName {get;set;}
 
-		 public string Gender {get;set;}
+		 public int Gender {get;set;}
 
 		 public string Identify {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 		 public string VirtualFundPassword {get;set;}
 
@@ -60,7 +60,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string Amount {get;set;}
 
-		 public string BankID {get;set;}
+		 public int BankID {get;set;}
 
 		 public string BankCardID {get;set;}
 
@@ -70,27 +70,27 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string District {get;set;}
 
-		 public string TradeAccountUserTypeID {get;set;}
+		 public int TradeAccountUserTypeID {get;set;}
 
-		 public string CloseTime {get;set;}
+		 public DateTime CloseTime {get;set;}
 
 		 public string OpenTypeID {get;set;}
 
-		 public string FirstResourceSubTypeID {get;set;}
+		 public int FirstResourceSubTypeID {get;set;}
 
-		 public string FirstResourceInTime {get;set;}
+		 public DateTime FirstResourceInTime {get;set;}
 
-		 public string FirstResourceTypeID {get;set;}
+		 public int FirstResourceTypeID {get;set;}
 
-		 public string LastEmployeeID {get;set;}
+		 public int LastEmployeeID {get;set;}
 
-		 public string FirstResourceSubPartID {get;set;}
+		 public int FirstResourceSubPartID {get;set;}
 
 		 public string ActivateSequenceID {get;set;}
 
 		 public string OpenState {get;set;}
 
-		 public string CountryId {get;set;}
+		 public int CountryId {get;set;}
 
 		 public string TradeAccountTypeCode {get;set;}
 

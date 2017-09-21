@@ -7,16 +7,16 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("Employee")]
-	public partial class EmployeeEntity : BaseEntity<string>
+	public partial class EmployeeEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.EmployeeID;
              set => this.EmployeeID = value;
          }	
 
 		 [Key]
-		 public string EmployeeID {get;set;}
+		 public int EmployeeID {get;set;}
 
 		 public string Staffid {get;set;}
 
@@ -24,13 +24,13 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string TrueName {get;set;}
 
-		 public string Gender {get;set;}
+		 public int Gender {get;set;}
 
 		 public string Available {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 		 public string PersonnelID {get;set;}
 
@@ -38,13 +38,13 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string OthersID {get;set;}
 
-		 public string LastLogin {get;set;}
+		 public DateTime LastLogin {get;set;}
 
-		 public string RecoverFlag {get;set;}
+		 public int RecoverFlag {get;set;}
 
 		 public string BizQQ {get;set;}
 
-		 public string DimissionTime {get;set;}
+		 public DateTime DimissionTime {get;set;}
 
 		 public string IsManager {get;set;}
 

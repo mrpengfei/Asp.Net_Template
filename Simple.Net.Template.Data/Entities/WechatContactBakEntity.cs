@@ -9,7 +9,7 @@ namespace Simple.Net.Template.Data.Entities
 	[Table("WechatContactBak")]
 	public partial class WechatContactBakEntity : BaseEntity<int>
 	{
-		 public string WechatContactBakId {get;set;}
+		 public int WechatContactBakId {get;set;}
 
 		 public string username {get;set;}
 
@@ -25,7 +25,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string WxUin {get;set;}
 
-		 public string CreateDate {get;set;}
+		 public DateTime CreateDate {get;set;}
 
 	}
 }

@@ -7,28 +7,28 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("NumberSection")]
-	public partial class NumberSectionEntity : BaseEntity<string>
+	public partial class NumberSectionEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.ID;
              set => this.ID = value;
          }	
 
 		 [Key]
-		 public string ID {get;set;}
+		 public int ID {get;set;}
 
 		 public string Number {get;set;}
 
-		 public string CityId {get;set;}
+		 public int CityId {get;set;}
 
 		 public string CityName {get;set;}
 
 		 public string Note {get;set;}
 
-		 public string ProDicID {get;set;}
+		 public int ProDicID {get;set;}
 
-		 public string CityDicID {get;set;}
+		 public int CityDicID {get;set;}
 
 	}
 }

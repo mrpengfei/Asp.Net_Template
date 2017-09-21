@@ -15,9 +15,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Entities\EntityGenerator.tt">
+    <None Update="T4\EntityGenerator.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EntityGenerator.cs</LastGenOutput>
+    </None>
+    <None Update="T4\RepositoryGenerator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RepositoryGenerator.cs</LastGenOutput>
+    </None>
+    <None Update="T4\RepositoryModuleGenerator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RepositoryModuleGenerator.cs</LastGenOutput>
     </None>
   </ItemGroup>
 
@@ -26,10 +34,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Entities\EntityGenerator.cs">
+    <Compile Update="T4\EntityGenerator.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>EntityGenerator.tt</DependentUpon>
+    </Compile>
+    <Compile Update="T4\RepositoryGenerator.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RepositoryGenerator.tt</DependentUpon>
+    </Compile>
+    <Compile Update="T4\RepositoryModuleGenerator.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RepositoryModuleGenerator.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

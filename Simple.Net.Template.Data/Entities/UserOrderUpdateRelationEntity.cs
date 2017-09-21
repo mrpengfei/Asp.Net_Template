@@ -7,18 +7,18 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserOrderUpdateRelation")]
-	public partial class UserOrderUpdateRelationEntity : BaseEntity<string>
+	public partial class UserOrderUpdateRelationEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.UserOrderUpdateRelationId;
              set => this.UserOrderUpdateRelationId = value;
          }	
 
 		 [Key]
-		 public string UserOrderUpdateRelationId {get;set;}
+		 public int UserOrderUpdateRelationId {get;set;}
 
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.OldUserOrderNo;
              set => this.OldUserOrderNo = value;
@@ -27,7 +27,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string OldUserOrderNo {get;set;}
 
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.NewUserOrderNo;
              set => this.NewUserOrderNo = value;
@@ -38,7 +38,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string OldOrderSurplusValue {get;set;}
 
-		 public string CreateDateTime {get;set;}
+		 public DateTime CreateDateTime {get;set;}
 
 	}
 }

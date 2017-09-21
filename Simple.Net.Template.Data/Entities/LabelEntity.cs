@@ -7,34 +7,34 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("Label")]
-	public partial class LabelEntity : BaseEntity<string>
+	public partial class LabelEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.LabelID;
              set => this.LabelID = value;
          }	
 
 		 [Key]
-		 public string LabelID {get;set;}
+		 public int LabelID {get;set;}
 
 		 public string LabelName {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string OperatorID {get;set;}
+		 public int OperatorID {get;set;}
 
-		 public string LabelCategoryID {get;set;}
+		 public int LabelCategoryID {get;set;}
 
 		 public string Remark {get;set;}
 
 		 public string IsDeleted {get;set;}
 
-		 public string CompanyID {get;set;}
+		 public int CompanyID {get;set;}
 
-		 public string DepartmentID {get;set;}
+		 public int DepartmentID {get;set;}
 
-		 public string GroupID {get;set;}
+		 public int GroupID {get;set;}
 
 		 public string IsPublic {get;set;}
 

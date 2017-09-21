@@ -7,16 +7,16 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ResourceDistribute")]
-	public partial class ResourceDistributeEntity : BaseEntity<string>
+	public partial class ResourceDistributeEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.Id;
              set => this.Id = value;
          }	
 
 		 [Key]
-		 public string Id {get;set;}
+		 public int Id {get;set;}
 
 		 public string Url {get;set;}
 
@@ -24,9 +24,9 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string Result {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 	}
 }

@@ -7,22 +7,22 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ViolationRecord")]
-	public partial class ViolationRecordEntity : BaseEntity<string>
+	public partial class ViolationRecordEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.ViolationRecorId;
              set => this.ViolationRecorId = value;
          }	
 
 		 [Key]
-		 public string ViolationRecorId {get;set;}
+		 public int ViolationRecorId {get;set;}
 
-		 public string EmployeeId {get;set;}
+		 public int EmployeeId {get;set;}
 
 		 public string UserId {get;set;}
 
-		 public string ViolationKeyWordId {get;set;}
+		 public int ViolationKeyWordId {get;set;}
 
 		 public string Wxuin {get;set;}
 
@@ -30,13 +30,13 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string MessageContent {get;set;}
 
-		 public string MessageTime {get;set;}
+		 public DateTime MessageTime {get;set;}
 
 		 public string ToUserName {get;set;}
 
-		 public string HandleEmployeeId {get;set;}
+		 public int HandleEmployeeId {get;set;}
 
-		 public string HandleTime {get;set;}
+		 public DateTime HandleTime {get;set;}
 
 		 public string HandleIpAddress {get;set;}
 
@@ -44,11 +44,11 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string State {get;set;}
 
-		 public string Result {get;set;}
+		 public int Result {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 		 public string ViolationKeyWord {get;set;}
 

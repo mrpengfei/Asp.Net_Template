@@ -7,22 +7,22 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WechatGroupConfig")]
-	public partial class WechatGroupConfigEntity : BaseEntity<string>
+	public partial class WechatGroupConfigEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.WechatGroupConfigId;
              set => this.WechatGroupConfigId = value;
          }	
 
 		 [Key]
-		 public string WechatGroupConfigId {get;set;}
+		 public int WechatGroupConfigId {get;set;}
 
 		 public string GroupName {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 	}
 }

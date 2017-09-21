@@ -7,28 +7,28 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ChatMessageConfig")]
-	public partial class ChatMessageConfigEntity : BaseEntity<string>
+	public partial class ChatMessageConfigEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.ChatMessageId;
              set => this.ChatMessageId = value;
          }	
 
 		 [Key]
-		 public string ChatMessageId {get;set;}
+		 public int ChatMessageId {get;set;}
 
-		 public string ChatMessageGroupId {get;set;}
+		 public int ChatMessageGroupId {get;set;}
 
 		 public string ChatMessageContent {get;set;}
 
 		 public string DelStatus {get;set;}
 
-		 public string ChatMessageType {get;set;}
+		 public int ChatMessageType {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 	}
 }

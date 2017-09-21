@@ -7,26 +7,26 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("RequestAndReturnTaskLog")]
-	public partial class RequestAndReturnTaskLogEntity : BaseEntity<string>
+	public partial class RequestAndReturnTaskLogEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.RequestAndReturnTaskLogId;
              set => this.RequestAndReturnTaskLogId = value;
          }	
 
 		 [Key]
-		 public string RequestAndReturnTaskLogId {get;set;}
+		 public int RequestAndReturnTaskLogId {get;set;}
 
 		 public string WechatUin {get;set;}
 
-		 public string RType {get;set;}
+		 public int RType {get;set;}
 
 		 public string ReturnParameter {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 	}
 }

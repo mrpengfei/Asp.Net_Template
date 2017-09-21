@@ -7,20 +7,20 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WorkDiaries")]
-	public partial class WorkDiariesEntity : BaseEntity<string>
+	public partial class WorkDiariesEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.WorkDiaryID;
              set => this.WorkDiaryID = value;
          }	
 
 		 [Key]
-		 public string WorkDiaryID {get;set;}
+		 public int WorkDiaryID {get;set;}
 
-		 public string DiaryTypeID {get;set;}
+		 public int DiaryTypeID {get;set;}
 
-		 public string EmployeeID {get;set;}
+		 public int EmployeeID {get;set;}
 
 		 public string UserID {get;set;}
 
@@ -28,11 +28,11 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string Comment {get;set;}
 
-		 public string CallInfoID {get;set;}
+		 public int CallInfoID {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 	}
 }

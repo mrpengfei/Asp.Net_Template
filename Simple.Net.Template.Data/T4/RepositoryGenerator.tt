@@ -1,0 +1,52 @@
+﻿<#@ template language="C#" debug="True" hostspecific="True" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Data" #>
+<#@ assembly name="System.xml" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System" #>
+<#@ include file="$(SolutionDir)\T4Common\ModelAuto.ttinclude"#>
+<#@ include file="$(SolutionDir)\T4Common\DbModel.ttinclude"#>
+<# 
+	var nameSpace = "Novel.Core.Dapper.Repository";
+	var outputPath = Path.GetDirectoryName(Path.GetDirectoryName(Host.TemplateFile))+"\\Repository\\Partials";
+#>
+<# var manager = new Manager(Host,GenerationEnvironment,true)
+	{
+		OutputPath = outputPath
+	};
+
+#>
+<# 
+	using (var dbManager = new SqliteDbModelManager(GetConnString()))
+    {
+		var tables = dbManager.GetTables();
+        foreach (var item in tables)
+        {
+            var className = GetClassName(item.Name,"Repository");
+			var entityName = GetClassName(item.Name);
+#>
+<# manager.StartBlock(className+".cs"); #>
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Dapper.Contrib.Extensions;
+using Novel.Core.Entities;
+using Novel.Core.Repository;
+
+
+namespace <#= nameSpace #>
+{
+	public partial class <#= className #> :DapperRepository<<#= entityName #>>, I<#= className #>
+	{
+		public <#= className #>(ISessionManager session) : base(session)
+        {
+        }
+	}
+}
+<# manager.EndBlock(); #>
+<#
+        }
+	}
+#>
+<# manager.Process(true); #>

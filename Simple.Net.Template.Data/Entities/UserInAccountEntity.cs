@@ -7,35 +7,35 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserInAccount")]
-	public partial class UserInAccountEntity : BaseEntity<string>
+	public partial class UserInAccountEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.UserInAccountId;
              set => this.UserInAccountId = value;
          }	
 
 		 [Key]
-		 public string UserInAccountId {get;set;}
+		 public int UserInAccountId {get;set;}
 
-		 public string UserInAccountApplyId {get;set;}
+		 public int UserInAccountApplyId {get;set;}
 
 		 public string UserId {get;set;}
 
 		 public string ApplyMoney {get;set;}
 
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.AccountTypeId;
              set => this.AccountTypeId = value;
          }	
 
 		 [Key]
-		 public string AccountTypeId {get;set;}
+		 public int AccountTypeId {get;set;}
 
 		 public string AccountMoney {get;set;}
 
-		 public string TransferDate {get;set;}
+		 public DateTime TransferDate {get;set;}
 
 		 public string TransferName {get;set;}
 
@@ -43,11 +43,11 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string Description {get;set;}
 
-		 public string CreateDate {get;set;}
+		 public DateTime CreateDate {get;set;}
 
-		 public string UpdateDate {get;set;}
+		 public DateTime UpdateDate {get;set;}
 
-		 public string EmployeeId {get;set;}
+		 public int EmployeeId {get;set;}
 
 	}
 }

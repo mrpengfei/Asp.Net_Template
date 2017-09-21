@@ -7,28 +7,28 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WechatTaskExtend")]
-	public partial class WechatTaskExtendEntity : BaseEntity<string>
+	public partial class WechatTaskExtendEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.WechatTaskExtendId;
              set => this.WechatTaskExtendId = value;
          }	
 
 		 [Key]
-		 public string WechatTaskExtendId {get;set;}
+		 public int WechatTaskExtendId {get;set;}
 
-		 public string MainTaskId {get;set;}
+		 public int MainTaskId {get;set;}
 
 		 public string WxUin {get;set;}
 
-		 public string ExtendCount {get;set;}
+		 public int ExtendCount {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
-		 public string WechatGroupConfigId {get;set;}
+		 public int WechatGroupConfigId {get;set;}
 
 	}
 }

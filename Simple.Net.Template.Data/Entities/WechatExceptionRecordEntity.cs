@@ -7,30 +7,30 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WechatExceptionRecord")]
-	public partial class WechatExceptionRecordEntity : BaseEntity<string>
+	public partial class WechatExceptionRecordEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.WechatExceptionRecordID;
              set => this.WechatExceptionRecordID = value;
          }	
 
 		 [Key]
-		 public string WechatExceptionRecordID {get;set;}
+		 public int WechatExceptionRecordID {get;set;}
 
 		 public string WechatUin {get;set;}
 
 		 public string WechatState {get;set;}
 
-		 public string ExceptionType {get;set;}
+		 public int ExceptionType {get;set;}
 
-		 public string ExceptionTime {get;set;}
+		 public DateTime ExceptionTime {get;set;}
 
-		 public string UnExceptionTime {get;set;}
+		 public DateTime UnExceptionTime {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 	}
 }

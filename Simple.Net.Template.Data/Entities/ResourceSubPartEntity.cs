@@ -7,22 +7,22 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ResourceSubPart")]
-	public partial class ResourceSubPartEntity : BaseEntity<string>
+	public partial class ResourceSubPartEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.ID;
              set => this.ID = value;
          }	
 
 		 [Key]
-		 public string ID {get;set;}
+		 public int ID {get;set;}
 
-		 public string ParentID {get;set;}
+		 public int ParentID {get;set;}
 
-		 public string ResourceTypeID {get;set;}
+		 public int ResourceTypeID {get;set;}
 
-		 public string ResourceSubTypeID {get;set;}
+		 public int ResourceSubTypeID {get;set;}
 
 		 public string SubPartName {get;set;}
 
@@ -34,13 +34,13 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string URL {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string IsOnline {get;set;}
+		 public int IsOnline {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
-		 public string ReferTypeID {get;set;}
+		 public int ReferTypeID {get;set;}
 
 		 public string ReferURL {get;set;}
 

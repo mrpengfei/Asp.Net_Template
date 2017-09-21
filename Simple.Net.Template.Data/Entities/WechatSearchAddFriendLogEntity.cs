@@ -7,20 +7,20 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WechatSearchAddFriendLog")]
-	public partial class WechatSearchAddFriendLogEntity : BaseEntity<string>
+	public partial class WechatSearchAddFriendLogEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.WechatSearchAddFriendLogId;
              set => this.WechatSearchAddFriendLogId = value;
          }	
 
 		 [Key]
-		 public string WechatSearchAddFriendLogId {get;set;}
+		 public int WechatSearchAddFriendLogId {get;set;}
 
 		 public string WechatUin {get;set;}
 
-		 public string EmployeeId {get;set;}
+		 public int EmployeeId {get;set;}
 
 		 public string WechatContactInfo {get;set;}
 
@@ -30,17 +30,17 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string UserId {get;set;}
 
-		 public string AddStatus {get;set;}
+		 public int AddStatus {get;set;}
 
-		 public string AddTimes {get;set;}
+		 public int AddTimes {get;set;}
 
-		 public string AddDate {get;set;}
+		 public DateTime AddDate {get;set;}
 
 		 public string Remark {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 	}
 }

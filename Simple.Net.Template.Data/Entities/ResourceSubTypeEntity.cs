@@ -7,18 +7,18 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ResourceSubType")]
-	public partial class ResourceSubTypeEntity : BaseEntity<string>
+	public partial class ResourceSubTypeEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.ID;
              set => this.ID = value;
          }	
 
 		 [Key]
-		 public string ID {get;set;}
+		 public int ID {get;set;}
 
-		 public string ResourceTypeID {get;set;}
+		 public int ResourceTypeID {get;set;}
 
 		 public string ResourceSubTypeName {get;set;}
 
@@ -38,11 +38,11 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string ActionFilePath {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string IsOnline {get;set;}
+		 public int IsOnline {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 	}
 }

@@ -7,24 +7,24 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("Menu")]
-	public partial class MenuEntity : BaseEntity<string>
+	public partial class MenuEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.MenuID;
              set => this.MenuID = value;
          }	
 
 		 [Key]
-		 public string MenuID {get;set;}
+		 public int MenuID {get;set;}
 
 		 public string MenuName {get;set;}
 
 		 public string Link {get;set;}
 
-		 public string Priority {get;set;}
+		 public int Priority {get;set;}
 
-		 public string ParentID {get;set;}
+		 public int ParentID {get;set;}
 
 		 public string IsShow {get;set;}
 

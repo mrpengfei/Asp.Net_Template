@@ -7,16 +7,16 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ResourceLogJob")]
-	public partial class ResourceLogJobEntity : BaseEntity<string>
+	public partial class ResourceLogJobEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.ResourceLogJobId;
              set => this.ResourceLogJobId = value;
          }	
 
 		 [Key]
-		 public string ResourceLogJobId {get;set;}
+		 public int ResourceLogJobId {get;set;}
 
 		 public string Mobile {get;set;}
 

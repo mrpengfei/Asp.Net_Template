@@ -7,20 +7,20 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("TianYiAPP")]
-	public partial class TianYiAPPEntity : BaseEntity<string>
+	public partial class TianYiAPPEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.TianYiAPPId;
              set => this.TianYiAPPId = value;
          }	
 
 		 [Key]
-		 public string TianYiAPPId {get;set;}
+		 public int TianYiAPPId {get;set;}
 
 		 public string APPVersion {get;set;}
 
-		 public string APPType {get;set;}
+		 public int APPType {get;set;}
 
 		 public string IsNeedUpdate {get;set;}
 
@@ -30,7 +30,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string SupportWechatVersion {get;set;}
 
-		 public string PublishDate {get;set;}
+		 public DateTime PublishDate {get;set;}
 
 	}
 }

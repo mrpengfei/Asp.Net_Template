@@ -125,6 +125,6 @@
 
 	public string GetConnString(string name="")
     {
-		return "Database=CRM_3410;User ID=sa;Password=daishu360!@#abc;Application Name=DaiShu-Crm-Api; Server=192.168.1.16;Connect Timeout=30;";
+		return "Database=DaiShuCrmDB3.0;User ID=sa;Password=daishu360!@#abc;Application Name=DaiShu-Crm-Api; Server=211.157.135.187;Connect Timeout=30;";
     }
 #>

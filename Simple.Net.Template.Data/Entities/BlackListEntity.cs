@@ -7,36 +7,36 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("BlackList")]
-	public partial class BlackListEntity : BaseEntity<string>
+	public partial class BlackListEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.ID;
              set => this.ID = value;
          }	
 
 		 [Key]
-		 public string ID {get;set;}
+		 public int ID {get;set;}
 
 		 public string UserID {get;set;}
 
-		 public string EmployeeID {get;set;}
+		 public int EmployeeID {get;set;}
 
-		 public string Status {get;set;}
+		 public int Status {get;set;}
 
 		 public string Description {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
-		 public string BlackType {get;set;}
+		 public int BlackType {get;set;}
 
 		 public string RecordInfo {get;set;}
 
-		 public string OpType {get;set;}
+		 public int OpType {get;set;}
 
-		 public string Operator {get;set;}
+		 public int Operator {get;set;}
 
 	}
 }

@@ -7,24 +7,24 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WechatRestartPlanConfig")]
-	public partial class WechatRestartPlanConfigEntity : BaseEntity<string>
+	public partial class WechatRestartPlanConfigEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.WechatRestartPlanId;
              set => this.WechatRestartPlanId = value;
          }	
 
 		 [Key]
-		 public string WechatRestartPlanId {get;set;}
+		 public int WechatRestartPlanId {get;set;}
 
-		 public string RestartMinutes {get;set;}
+		 public int RestartMinutes {get;set;}
 
-		 public string RestartSeconds {get;set;}
+		 public int RestartSeconds {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 	}
 }

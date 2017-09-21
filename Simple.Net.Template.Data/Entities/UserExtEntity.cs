@@ -7,28 +7,28 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserExt")]
-	public partial class UserExtEntity : BaseEntity<string>
+	public partial class UserExtEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.UserExtId;
              set => this.UserExtId = value;
          }	
 
 		 [Key]
-		 public string UserExtId {get;set;}
+		 public int UserExtId {get;set;}
 
 		 public string Integral {get;set;}
 
-		 public string Level {get;set;}
+		 public int Level {get;set;}
 
-		 public string LastLoginTime {get;set;}
+		 public DateTime LastLoginTime {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
 		 public string UserID {get;set;}
 
-		 public string RegisterTime {get;set;}
+		 public DateTime RegisterTime {get;set;}
 
 		 public string UserName {get;set;}
 

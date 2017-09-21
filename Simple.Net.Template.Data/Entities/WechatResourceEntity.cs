@@ -7,26 +7,26 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WechatResource")]
-	public partial class WechatResourceEntity : BaseEntity<string>
+	public partial class WechatResourceEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.WechatResourceId;
              set => this.WechatResourceId = value;
          }	
 
 		 [Key]
-		 public string WechatResourceId {get;set;}
+		 public int WechatResourceId {get;set;}
 
-		 public string ResourceId {get;set;}
+		 public int ResourceId {get;set;}
 
-		 public string EmployeeId {get;set;}
+		 public int EmployeeId {get;set;}
 
 		 public string IsPull {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 		 public string WechatUid {get;set;}
 

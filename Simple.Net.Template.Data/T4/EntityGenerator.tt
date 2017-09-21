@@ -9,7 +9,7 @@
 <#@ include file="$(SolutionDir)\T4Common\DbModel.SqlServer.ttinclude"#>
 <# 
 	var nameSpace = "Simple.Net.Template.Data.Entities";
-	var outputPath = Path.GetDirectoryName(Host.TemplateFile);
+	var outputPath = Path.GetDirectoryName(Path.GetDirectoryName(Host.TemplateFile))+"\\Entities";
 #>
 <# var manager = new Manager(Host,GenerationEnvironment,true)
 	{

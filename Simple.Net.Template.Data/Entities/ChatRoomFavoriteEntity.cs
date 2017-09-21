@@ -7,26 +7,26 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ChatRoomFavorite")]
-	public partial class ChatRoomFavoriteEntity : BaseEntity<string>
+	public partial class ChatRoomFavoriteEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.ChatRoomFavoriteId;
              set => this.ChatRoomFavoriteId = value;
          }	
 
 		 [Key]
-		 public string ChatRoomFavoriteId {get;set;}
+		 public int ChatRoomFavoriteId {get;set;}
 
 		 public string FavoriteMiniImagePath {get;set;}
 
 		 public string FavoriteOriginalPath {get;set;}
 
-		 public string Type {get;set;}
+		 public int Type {get;set;}
 
-		 public string EmployeeId {get;set;}
+		 public int EmployeeId {get;set;}
 
-		 public string CreateDate {get;set;}
+		 public DateTime CreateDate {get;set;}
 
 		 public string IsDelete {get;set;}
 

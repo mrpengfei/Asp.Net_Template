@@ -34,7 +34,7 @@ namespace Simple.Net.Template.Data.Entities
          }	
 
 		 [Key]
-		 public string ProduCategoryId {get;set;}
+		 public int ProduCategoryId {get;set;}
 
  		 public override string Key
          {
@@ -43,7 +43,7 @@ namespace Simple.Net.Template.Data.Entities
          }	
 
 		 [Key]
-		 public string ProductId {get;set;}
+		 public int ProductId {get;set;}
 
  		 public override string Key
          {
@@ -52,7 +52,7 @@ namespace Simple.Net.Template.Data.Entities
          }	
 
 		 [Key]
-		 public string OrderTypeId {get;set;}
+		 public int OrderTypeId {get;set;}
 
 		 public string OrderTitle {get;set;}
 
@@ -65,9 +65,9 @@ namespace Simple.Net.Template.Data.Entities
          }	
 
 		 [Key]
-		 public string OrderStateId {get;set;}
+		 public int OrderStateId {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
 		 public string OrderPrice {get;set;}
 
@@ -80,7 +80,7 @@ namespace Simple.Net.Template.Data.Entities
          }	
 
 		 [Key]
-		 public string PaymentTypeId {get;set;}
+		 public int PaymentTypeId {get;set;}
 
  		 public override string Key
          {
@@ -89,7 +89,7 @@ namespace Simple.Net.Template.Data.Entities
          }	
 
 		 [Key]
-		 public string EmployeeId {get;set;}
+		 public int EmployeeId {get;set;}
 
 		 public string FailureReason {get;set;}
 
@@ -109,7 +109,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string BankName {get;set;}
 
-		 public string TransactionDate {get;set;}
+		 public DateTime TransactionDate {get;set;}
 
 		 public string WechatNo {get;set;}
 
@@ -117,7 +117,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string IsUpdated {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 		 public string IsCloseOldAuthorization {get;set;}
 
@@ -128,7 +128,7 @@ namespace Simple.Net.Template.Data.Entities
          }	
 
 		 [Key]
-		 public string OriginOrderProductCategoryId {get;set;}
+		 public int OriginOrderProductCategoryId {get;set;}
 
 		 public string IsOpenAuthorization {get;set;}
 
@@ -138,7 +138,14 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string IsHasIncome {get;set;}
 
-		 public string ServicesTypeId {get;set;}
+ 		 public override string Key
+         {
+             get => this.ServicesTypeId;
+             set => this.ServicesTypeId = value;
+         }	
+
+		 [Key]
+		 public int ServicesTypeId {get;set;}
 
 		 public string TotalIncome {get;set;}
 
@@ -146,7 +153,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string IsSignContract {get;set;}
 
-		 public string SignContractDate {get;set;}
+		 public DateTime SignContractDate {get;set;}
 
 		 public string IsAssignedServiceEmployee {get;set;}
 
@@ -161,7 +168,7 @@ namespace Simple.Net.Template.Data.Entities
          }	
 
 		 [Key]
-		 public string RefundStateId {get;set;}
+		 public int RefundStateId {get;set;}
 
 	}
 }

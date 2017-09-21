@@ -7,16 +7,16 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserFunds")]
-	public partial class UserFundsEntity : BaseEntity<string>
+	public partial class UserFundsEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.UserFundsId;
              set => this.UserFundsId = value;
          }	
 
 		 [Key]
-		 public string UserFundsId {get;set;}
+		 public int UserFundsId {get;set;}
 
 		 public string UserID {get;set;}
 
@@ -28,15 +28,15 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string LatelyIncomeMoney {get;set;}
 
-		 public string LatelyIncomeDate {get;set;}
+		 public DateTime LatelyIncomeDate {get;set;}
 
 		 public string LatelyPurchaseMoney {get;set;}
 
-		 public string LatelyPurchaseDate {get;set;}
+		 public DateTime LatelyPurchaseDate {get;set;}
 
-		 public string CreateDate {get;set;}
+		 public DateTime CreateDate {get;set;}
 
-		 public string UpdateDate {get;set;}
+		 public DateTime UpdateDate {get;set;}
 
 	}
 }

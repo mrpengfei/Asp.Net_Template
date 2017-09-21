@@ -7,16 +7,16 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WeChatRcontactWeb")]
-	public partial class WeChatRcontactWebEntity : BaseEntity<string>
+	public partial class WeChatRcontactWebEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.WeChatRcontactWebId;
              set => this.WeChatRcontactWebId = value;
          }	
 
 		 [Key]
-		 public string WeChatRcontactWebId {get;set;}
+		 public int WeChatRcontactWebId {get;set;}
 
 		 public string username {get;set;}
 
@@ -26,7 +26,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string nickname {get;set;}
 
-		 public string CreateDate {get;set;}
+		 public DateTime CreateDate {get;set;}
 
 		 public string UserId {get;set;}
 
@@ -34,7 +34,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string UpdateTrueName {get;set;}
 
-		 public string EmployeeId {get;set;}
+		 public int EmployeeId {get;set;}
 
 		 public string WxUin {get;set;}
 

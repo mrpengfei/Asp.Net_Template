@@ -7,22 +7,22 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("EmployeeOpenFunction")]
-	public partial class EmployeeOpenFunctionEntity : BaseEntity<string>
+	public partial class EmployeeOpenFunctionEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.EmployeeOpenFunctionId;
              set => this.EmployeeOpenFunctionId = value;
          }	
 
 		 [Key]
-		 public string EmployeeOpenFunctionId {get;set;}
+		 public int EmployeeOpenFunctionId {get;set;}
 
-		 public string EmployeeId {get;set;}
+		 public int EmployeeId {get;set;}
 
-		 public string FunctionId {get;set;}
+		 public int FunctionId {get;set;}
 
-		 public string CreateDate {get;set;}
+		 public DateTime CreateDate {get;set;}
 
 	}
 }

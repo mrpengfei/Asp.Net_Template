@@ -7,52 +7,52 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ResourceRecycleLog")]
-	public partial class ResourceRecycleLogEntity : BaseEntity<string>
+	public partial class ResourceRecycleLogEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.ResourceRecycleLogId;
              set => this.ResourceRecycleLogId = value;
          }	
 
 		 [Key]
-		 public string ResourceRecycleLogId {get;set;}
+		 public int ResourceRecycleLogId {get;set;}
 
-		 public string ResourceId {get;set;}
+		 public int ResourceId {get;set;}
 
 		 public string WechatUin {get;set;}
 
-		 public string CompanyId {get;set;}
+		 public int CompanyId {get;set;}
 
-		 public string DepartmentId {get;set;}
+		 public int DepartmentId {get;set;}
 
-		 public string GroupId {get;set;}
+		 public int GroupId {get;set;}
 
-		 public string EmployeeId {get;set;}
+		 public int EmployeeId {get;set;}
 
-		 public string PullTime {get;set;}
+		 public DateTime PullTime {get;set;}
 
 		 public string HasWechat {get;set;}
 
 		 public string IsAddWechat {get;set;}
 
-		 public string AddWechatTime {get;set;}
+		 public DateTime AddWechatTime {get;set;}
 
-		 public string ResourceTypeId {get;set;}
+		 public int ResourceTypeId {get;set;}
 
-		 public string ResourceSubTypeId {get;set;}
+		 public int ResourceSubTypeId {get;set;}
 
-		 public string RecycleDate {get;set;}
+		 public DateTime RecycleDate {get;set;}
 
 		 public string RecycleReason {get;set;}
 
-		 public string OperatorId {get;set;}
+		 public int OperatorId {get;set;}
 
 		 public string IpAddress {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 	}
 }

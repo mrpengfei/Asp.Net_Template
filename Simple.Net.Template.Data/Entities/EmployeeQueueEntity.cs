@@ -7,24 +7,24 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("EmployeeQueue")]
-	public partial class EmployeeQueueEntity : BaseEntity<string>
+	public partial class EmployeeQueueEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.EmployeeQueueId;
              set => this.EmployeeQueueId = value;
          }	
 
 		 [Key]
-		 public string EmployeeQueueId {get;set;}
+		 public int EmployeeQueueId {get;set;}
 
-		 public string DepartmentId {get;set;}
+		 public int DepartmentId {get;set;}
 
-		 public string GroupId {get;set;}
+		 public int GroupId {get;set;}
 
-		 public string EmployeeId {get;set;}
+		 public int EmployeeId {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
 	}
 }

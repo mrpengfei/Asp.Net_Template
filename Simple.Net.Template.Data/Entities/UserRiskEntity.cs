@@ -25,7 +25,7 @@ namespace Simple.Net.Template.Data.Entities
          }	
 
 		 [Key]
-		 public string RiskTypeId {get;set;}
+		 public int RiskTypeId {get;set;}
 
 	}
 }

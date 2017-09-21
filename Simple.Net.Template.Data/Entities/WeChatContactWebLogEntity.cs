@@ -7,16 +7,16 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WeChatContactWebLog")]
-	public partial class WeChatContactWebLogEntity : BaseEntity<string>
+	public partial class WeChatContactWebLogEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.WeChatContactWebLogId;
              set => this.WeChatContactWebLogId = value;
          }	
 
 		 [Key]
-		 public string WeChatContactWebLogId {get;set;}
+		 public int WeChatContactWebLogId {get;set;}
 
 		 public string UserId {get;set;}
 
@@ -24,7 +24,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string WxUin {get;set;}
 
-		 public string EmployeeId {get;set;}
+		 public int EmployeeId {get;set;}
 
 		 public string Assigned {get;set;}
 
@@ -34,11 +34,11 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string UpdateTrueName {get;set;}
 
-		 public string AddType {get;set;}
+		 public int AddType {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 	}
 }

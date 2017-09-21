@@ -7,28 +7,28 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WechatAddResourceReport")]
-	public partial class WechatAddResourceReportEntity : BaseEntity<string>
+	public partial class WechatAddResourceReportEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.WechatAddResourceReportId;
              set => this.WechatAddResourceReportId = value;
          }	
 
 		 [Key]
-		 public string WechatAddResourceReportId {get;set;}
+		 public int WechatAddResourceReportId {get;set;}
 
-		 public string CompanyId {get;set;}
+		 public int CompanyId {get;set;}
 
-		 public string DepartmentId {get;set;}
+		 public int DepartmentId {get;set;}
 
-		 public string GroupId {get;set;}
+		 public int GroupId {get;set;}
 
-		 public string EmployeeId {get;set;}
+		 public int EmployeeId {get;set;}
 
 		 public string WechatUin {get;set;}
 
-		 public string ReportDate {get;set;}
+		 public DateTime ReportDate {get;set;}
 
 		 public string InitializeApplyCount {get;set;}
 
@@ -66,9 +66,9 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string ActiveSuccessCount {get;set;}
 
-		 public string CreateDate {get;set;}
+		 public DateTime CreateDate {get;set;}
 
-		 public string UpdateDate {get;set;}
+		 public DateTime UpdateDate {get;set;}
 
 	}
 }

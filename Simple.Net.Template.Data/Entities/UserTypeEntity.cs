@@ -7,22 +7,18 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("UserType")]
-	public partial class UserTypeEntity : BaseEntity<string>
+	public partial class UserTypeEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.UserTypeID;
              set => this.UserTypeID = value;
          }	
 
 		 [Key]
-		 public string UserTypeID {get;set;}
+		 public int UserTypeID {get;set;}
 
 		 public string UserTypeName {get;set;}
-
-		 public string OrderSize {get;set;}
-
-		 public string IsBack {get;set;}
 
 	}
 }

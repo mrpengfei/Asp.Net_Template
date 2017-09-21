@@ -7,32 +7,32 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("WechatAddFriendConfigLog")]
-	public partial class WechatAddFriendConfigLogEntity : BaseEntity<string>
+	public partial class WechatAddFriendConfigLogEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.AddFriendLogId;
              set => this.AddFriendLogId = value;
          }	
 
 		 [Key]
-		 public string AddFriendLogId {get;set;}
+		 public int AddFriendLogId {get;set;}
 
-		 public string AddFriendId {get;set;}
+		 public int AddFriendId {get;set;}
 
 		 public string TimeBucket {get;set;}
 
-		 public string Count {get;set;}
+		 public int Count {get;set;}
 
-		 public string Sex {get;set;}
+		 public int Sex {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
 		 public string WechatNoInfo {get;set;}
 
-		 public string Statue {get;set;}
+		 public int Statue {get;set;}
 
 		 public string BeginTime {get;set;}
 

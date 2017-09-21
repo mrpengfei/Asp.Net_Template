@@ -7,28 +7,28 @@ using Dapper.Contrib.Extensions;
 namespace Simple.Net.Template.Data.Entities
 {
 	[Table("ResourceLog")]
-	public partial class ResourceLogEntity : BaseEntity<string>
+	public partial class ResourceLogEntity : BaseEntity<int>
 	{
- 		 public override string Key
+ 		 public override int Key
          {
              get => this.ResourceLogID;
              set => this.ResourceLogID = value;
          }	
 
 		 [Key]
-		 public string ResourceLogID {get;set;}
+		 public int ResourceLogID {get;set;}
 
 		 public string Mobile {get;set;}
 
 		 public string ResourceContent {get;set;}
 
-		 public string ImportTime {get;set;}
+		 public DateTime ImportTime {get;set;}
 
-		 public string ResourceID {get;set;}
+		 public int ResourceID {get;set;}
 
-		 public string ResourceTypeID {get;set;}
+		 public int ResourceTypeID {get;set;}
 
-		 public string ResourceSubTypeID {get;set;}
+		 public int ResourceSubTypeID {get;set;}
 
 		 public string NeeAddMemo {get;set;}
 
@@ -36,21 +36,55 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string ImprotedPool {get;set;}
 
-		 public string CreateTime {get;set;}
+		 public DateTime CreateTime {get;set;}
 
-		 public string UpdateTime {get;set;}
+		 public DateTime UpdateTime {get;set;}
 
-		 public string EmployeeID {get;set;}
+		 public int EmployeeID {get;set;}
 
 		 public string IsNew {get;set;}
 
-		 public string GroupID {get;set;}
+		 public int GroupID {get;set;}
 
-		 public string ResourceSubPartID {get;set;}
+		 public int ResourceSubPartID {get;set;}
 
-		 public string ContactTypeId {get;set;}
+		 public int ContactTypeId {get;set;}
 
 		 public string MobileMd5 {get;set;}
+
+		 public int DepartmentID {get;set;}
+
+		 public int CompanyID {get;set;}
+
+		 public string Mobile2 {get;set;}
+
+		 public string Telephone {get;set;}
+
+		 public string Name {get;set;}
+
+		 public int Gender {get;set;}
+
+		 public string IdCard {get;set;}
+
+		 public string QQ {get;set;}
+
+		 public string Wechat {get;set;}
+
+		 public string Email {get;set;}
+
+		 public string Province {get;set;}
+
+		 public string City {get;set;}
+
+		 public string Address {get;set;}
+
+		 public string CompanyName {get;set;}
+
+		 public string CompanyPosition {get;set;}
+
+		 public string ExpectSalary {get;set;}
+
+		 public string ExpectJob {get;set;}
 
 	}
 }
