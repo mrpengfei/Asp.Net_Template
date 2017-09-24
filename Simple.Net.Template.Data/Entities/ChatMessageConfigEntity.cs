@@ -22,7 +22,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string ChatMessageContent {get;set;}
 
-		 public string DelStatus {get;set;}
+		 public bool DelStatus {get;set;}
 
 		 public int ChatMessageType {get;set;}
 

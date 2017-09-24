@@ -18,13 +18,6 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public int ProductCategoryId {get;set;}
 
- 		 public override int Key
-         {
-             get => this.CompanyID;
-             set => this.CompanyID = value;
-         }	
-
-		 [Key]
 		 public int CompanyID {get;set;}
 
 		 public string ProductCategoryName {get;set;}
@@ -33,7 +26,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string ProductCategoryDescription {get;set;}
 
-		 public string IsDeleted {get;set;}
+		 public bool IsDeleted {get;set;}
 
 		 public DateTime CreateTime {get;set;}
 

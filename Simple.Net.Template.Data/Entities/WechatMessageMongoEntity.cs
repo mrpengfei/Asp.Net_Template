@@ -30,9 +30,9 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public DateTime MessageTime {get;set;}
 
-		 public string IsSendMessage {get;set;}
+		 public bool IsSendMessage {get;set;}
 
-		 public string MessageWordCount {get;set;}
+		 public decimal MessageWordCount {get;set;}
 
 		 public DateTime CreateTime {get;set;}
 

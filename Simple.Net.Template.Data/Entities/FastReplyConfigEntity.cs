@@ -24,7 +24,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string FastReplyRemark {get;set;}
 
-		 public string DelStatus {get;set;}
+		 public bool DelStatus {get;set;}
 
 		 public DateTime CreateTime {get;set;}
 

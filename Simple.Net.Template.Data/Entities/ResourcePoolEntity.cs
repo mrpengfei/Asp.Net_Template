@@ -22,7 +22,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int ResourceLogID {get;set;}
 
-		 public string Handled {get;set;}
+		 public bool Handled {get;set;}
 
 		 public DateTime CreateTime {get;set;}
 

@@ -30,41 +30,41 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public DateTime ReportDate {get;set;}
 
-		 public string InitializeApplyCount {get;set;}
+		 public decimal InitializeApplyCount {get;set;}
 
-		 public string InitializeSuccessCount {get;set;}
+		 public decimal InitializeSuccessCount {get;set;}
 
-		 public string AddressApplyCount {get;set;}
+		 public decimal AddressApplyCount {get;set;}
 
-		 public string AddressSuccessCount {get;set;}
+		 public decimal AddressSuccessCount {get;set;}
 
-		 public string PassiveApplyCount {get;set;}
+		 public decimal PassiveApplyCount {get;set;}
 
-		 public string PassiveSuccessCount {get;set;}
+		 public decimal PassiveSuccessCount {get;set;}
 
-		 public string SearchApplyCount {get;set;}
+		 public decimal SearchApplyCount {get;set;}
 
-		 public string SearchSuccessCount {get;set;}
+		 public decimal SearchSuccessCount {get;set;}
 
-		 public string GroupApplyCount {get;set;}
+		 public decimal GroupApplyCount {get;set;}
 
-		 public string GroupSuccessCount {get;set;}
+		 public decimal GroupSuccessCount {get;set;}
 
-		 public string ShareCardApplyCount {get;set;}
+		 public decimal ShareCardApplyCount {get;set;}
 
-		 public string ShareCardSuccessCount {get;set;}
+		 public decimal ShareCardSuccessCount {get;set;}
 
-		 public string DeletedApplyCount {get;set;}
+		 public decimal DeletedApplyCount {get;set;}
 
-		 public string DeletedSuccessCount {get;set;}
+		 public decimal DeletedSuccessCount {get;set;}
 
-		 public string UnKnownApplyCount {get;set;}
+		 public decimal UnKnownApplyCount {get;set;}
 
-		 public string UnKnownSuccessCount {get;set;}
+		 public decimal UnKnownSuccessCount {get;set;}
 
-		 public string ActiveApplyCount {get;set;}
+		 public decimal ActiveApplyCount {get;set;}
 
-		 public string ActiveSuccessCount {get;set;}
+		 public decimal ActiveSuccessCount {get;set;}
 
 		 public DateTime CreateDate {get;set;}
 

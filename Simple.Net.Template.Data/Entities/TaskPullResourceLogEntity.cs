@@ -24,7 +24,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string WxUin {get;set;}
 
-		 public string AddType {get;set;}
+		 public bool AddType {get;set;}
 
 		 public DateTime PullTime {get;set;}
 

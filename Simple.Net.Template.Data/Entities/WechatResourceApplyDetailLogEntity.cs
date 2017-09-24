@@ -24,15 +24,15 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int AddType {get;set;}
 
-		 public string IsAddWechatApply {get;set;}
+		 public bool IsAddWechatApply {get;set;}
 
-		 public string IsAddWechatSuccess {get;set;}
+		 public bool IsAddWechatSuccess {get;set;}
 
 		 public DateTime AddWechatApplyTime {get;set;}
 
 		 public DateTime AddWechatSuccessTime {get;set;}
 
-		 public string IsActive {get;set;}
+		 public bool IsActive {get;set;}
 
 		 public DateTime CreateTime {get;set;}
 

@@ -32,9 +32,9 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public DateTime PullTime {get;set;}
 
-		 public string HasWechat {get;set;}
+		 public bool HasWechat {get;set;}
 
-		 public string IsAddWechat {get;set;}
+		 public bool IsAddWechat {get;set;}
 
 		 public DateTime AddWechatTime {get;set;}
 

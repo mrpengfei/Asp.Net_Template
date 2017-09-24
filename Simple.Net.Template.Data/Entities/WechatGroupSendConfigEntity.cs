@@ -6,8 +6,8 @@ using Dapper.Contrib.Extensions;
 
 namespace Simple.Net.Template.Data.Entities
 {
-	[Table("WechatGroupSendConfig ")]
-	public partial class WechatGroupSendConfig Entity : BaseEntity<int>
+	[Table("WechatGroupSendConfig")]
+	public partial class WechatGroupSendConfigEntity : BaseEntity<int>
 	{
  		 public override int Key
          {

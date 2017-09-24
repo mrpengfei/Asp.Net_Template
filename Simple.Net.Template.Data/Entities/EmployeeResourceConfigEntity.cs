@@ -32,7 +32,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string EffectiveDate {get;set;}
 
-		 public string IsAcitive {get;set;}
+		 public bool IsAcitive {get;set;}
 
 		 public int OperatorId {get;set;}
 

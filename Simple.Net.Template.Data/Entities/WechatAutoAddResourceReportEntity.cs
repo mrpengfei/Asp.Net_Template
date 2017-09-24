@@ -30,15 +30,15 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public DateTime ReportDate {get;set;}
 
-		 public string WaitPullResourceCount {get;set;}
+		 public decimal WaitPullResourceCount {get;set;}
 
-		 public string HandleCount {get;set;}
+		 public decimal HandleCount {get;set;}
 
-		 public string HasWechatCount {get;set;}
+		 public decimal HasWechatCount {get;set;}
 
-		 public string AddWechatApplyCount {get;set;}
+		 public decimal AddWechatApplyCount {get;set;}
 
-		 public string AddWechatSuccessCount {get;set;}
+		 public decimal AddWechatSuccessCount {get;set;}
 
 		 public DateTime CreateDate {get;set;}
 

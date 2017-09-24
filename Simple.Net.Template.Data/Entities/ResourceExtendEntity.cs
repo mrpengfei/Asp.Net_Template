@@ -20,9 +20,9 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int ResourceId {get;set;}
 
-		 public string HasWechat {get;set;}
+		 public bool HasWechat {get;set;}
 
-		 public string AddWechat {get;set;}
+		 public bool AddWechat {get;set;}
 
 		 public DateTime CreateDate {get;set;}
 
@@ -30,9 +30,9 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int WechatGender {get;set;}
 
-		 public string IsPull {get;set;}
+		 public bool IsPull {get;set;}
 
-		 public string IsAddWechat {get;set;}
+		 public bool IsAddWechat {get;set;}
 
 	}
 }

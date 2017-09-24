@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.6.1" />
     <PackageReference Include="Dapper" Version="1.50.2" />
     <PackageReference Include="Dapper.Contrib" Version="1.50.0" />
   </ItemGroup>
@@ -21,10 +22,6 @@
     <None Update="T4\RepositoryGenerator.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>RepositoryGenerator.cs</LastGenOutput>
-    </None>
-    <None Update="T4\RepositoryModuleGenerator.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>RepositoryModuleGenerator.cs</LastGenOutput>
     </None>
   </ItemGroup>
 
@@ -42,11 +39,6 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>RepositoryGenerator.tt</DependentUpon>
-    </Compile>
-    <Compile Update="T4\RepositoryModuleGenerator.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>RepositoryModuleGenerator.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

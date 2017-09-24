@@ -18,25 +18,11 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public int UserOrderLogId {get;set;}
 
- 		 public override int Key
-         {
-             get => this.UserOrderNo;
-             set => this.UserOrderNo = value;
-         }	
-
-		 [Key]
 		 public string UserOrderNo {get;set;}
 
- 		 public override int Key
-         {
-             get => this.EmployeeID;
-             set => this.EmployeeID = value;
-         }	
-
-		 [Key]
 		 public int EmployeeID {get;set;}
 
-		 public string OrderResult {get;set;}
+		 public bool OrderResult {get;set;}
 
 		 public string Description {get;set;}
 

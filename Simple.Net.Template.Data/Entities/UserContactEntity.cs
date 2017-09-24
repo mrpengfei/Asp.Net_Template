@@ -38,7 +38,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public DateTime UpdateTime {get;set;}
 
-		 public string Ismajor {get;set;}
+		 public bool Ismajor {get;set;}
 
 		 public int ProDicId {get;set;}
 

@@ -32,7 +32,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string OldUserId {get;set;}
 
-		 public string Handle {get;set;}
+		 public bool Handle {get;set;}
 
 		 public int EmployeeId {get;set;}
 

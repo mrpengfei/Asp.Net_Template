@@ -59,7 +59,7 @@
 					(case when k.COLUMN_NAME is null then 0 else 1 end) primaryKey
 					 from sys.columns c
 					 inner join sys.types t on C.system_type_id = t.system_type_id	and c.user_type_id = t.user_type_id
-					left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE k on c.name = k.COLUMN_NAME and k.TABLE_NAME = '{0}'
+					left join INFORMATION_SCHEMA.KEY_COLUMN_USAGE k on c.name = k.COLUMN_NAME and k.TABLE_NAME = '{0}' and k.CONSTRAINT_NAME like 'PK_%'
 				where object_id = OBJECT_ID('{0}')
 				",table);
                 using (var reader = cmd.ExecuteReader())
@@ -107,12 +107,12 @@
 		}
 	}
 
-	class TableModel 
+	public class TableModel 
 	{
         public string Name { get; set; }
 	}
 
-	class ColumnModel
+	public class ColumnModel
     {
         public string Name { get; set; }
 
@@ -131,7 +131,17 @@
         {
 			return name;
         }
+		name = name.Trim();
 		return name.Substring(0,1).ToUpper()+name.Remove(0,1)+prefix;
+	}
+
+	public string GetPkType(IList<ColumnModel> columns){
+		var pkColumn = columns.FirstOrDefault(p=>p.Pk);
+		var pkType="int";
+		if(pkColumn != null){
+			pkType = pkColumn.Type;
+		}
+		return pkType;
 	}
 
 	public string GetConnString(string name="")

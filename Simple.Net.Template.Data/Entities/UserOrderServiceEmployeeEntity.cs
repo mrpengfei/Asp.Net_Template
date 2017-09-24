@@ -30,11 +30,11 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int ServiceCompanyId {get;set;}
 
-		 public string IsConfirm {get;set;}
+		 public bool IsConfirm {get;set;}
 
 		 public DateTime ConfirmDate {get;set;}
 
-		 public string IsActive {get;set;}
+		 public bool IsActive {get;set;}
 
 		 public DateTime CreateDate {get;set;}
 

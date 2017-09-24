@@ -30,11 +30,11 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int ResourceSubTypeID {get;set;}
 
-		 public string NeeAddMemo {get;set;}
+		 public bool NeeAddMemo {get;set;}
 
-		 public string Handled {get;set;}
+		 public bool Handled {get;set;}
 
-		 public string ImprotedPool {get;set;}
+		 public bool ImprotedPool {get;set;}
 
 		 public DateTime CreateTime {get;set;}
 
@@ -42,7 +42,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int EmployeeID {get;set;}
 
-		 public string IsNew {get;set;}
+		 public bool IsNew {get;set;}
 
 		 public int GroupID {get;set;}
 

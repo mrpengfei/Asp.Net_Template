@@ -26,7 +26,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int ParentID {get;set;}
 
-		 public string IsShow {get;set;}
+		 public bool IsShow {get;set;}
 
 	}
 }

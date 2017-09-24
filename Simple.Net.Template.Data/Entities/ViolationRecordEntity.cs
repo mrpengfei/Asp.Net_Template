@@ -42,7 +42,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string Remark {get;set;}
 
-		 public string State {get;set;}
+		 public bool State {get;set;}
 
 		 public int Result {get;set;}
 

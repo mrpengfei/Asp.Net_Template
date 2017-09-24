@@ -32,9 +32,9 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string UserID {get;set;}
 
-		 public string IsNew {get;set;}
+		 public bool IsNew {get;set;}
 
-		 public string IsMulti {get;set;}
+		 public bool IsMulti {get;set;}
 
 		 public DateTime CallStart {get;set;}
 

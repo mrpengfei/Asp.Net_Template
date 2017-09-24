@@ -22,16 +22,9 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int UserOrderRefundId {get;set;}
 
- 		 public override int Key
-         {
-             get => this.MaterialTypeId;
-             set => this.MaterialTypeId = value;
-         }	
-
-		 [Key]
 		 public int MaterialTypeId {get;set;}
 
-		 public string IsHave {get;set;}
+		 public bool IsHave {get;set;}
 
 		 public string MaterialNo {get;set;}
 

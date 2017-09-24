@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Novel.Core.Repository
+namespace Simple.Net.Template.Data.IRepositories
 {
     public interface IRepository
     {

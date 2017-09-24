@@ -5,9 +5,9 @@ using Dapper.Contrib.Extensions;
 using Simple.Net.Template.Data.Entities;
 
 
-namespace Novel.Core.Repository
+namespace Simple.Net.Template.Data.IRepositories
 {
-	public partial interface IWechatSearchAddFriendConfigRepository : IRepository<WechatSearchAddFriendConfigEntity>
+	public partial interface IWechatSearchAddFriendConfigRepository : IRepository<WechatSearchAddFriendConfigEntity,int>
 	{
 	}
 }

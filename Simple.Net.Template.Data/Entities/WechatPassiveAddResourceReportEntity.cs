@@ -30,9 +30,9 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public DateTime ReportDate {get;set;}
 
-		 public string AddWechatApplyCount {get;set;}
+		 public decimal AddWechatApplyCount {get;set;}
 
-		 public string AddWechatSuccessCount {get;set;}
+		 public decimal AddWechatSuccessCount {get;set;}
 
 		 public DateTime CreateDate {get;set;}
 

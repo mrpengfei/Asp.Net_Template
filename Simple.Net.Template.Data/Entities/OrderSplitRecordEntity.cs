@@ -18,18 +18,11 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public int OrderSplitRecordId {get;set;}
 
- 		 public override int Key
-         {
-             get => this.UserOrderNo;
-             set => this.UserOrderNo = value;
-         }	
-
-		 [Key]
 		 public string UserOrderNo {get;set;}
 
 		 public string StaffId {get;set;}
 
-		 public string Price {get;set;}
+		 public decimal Price {get;set;}
 
 		 public DateTime CreateDate {get;set;}
 

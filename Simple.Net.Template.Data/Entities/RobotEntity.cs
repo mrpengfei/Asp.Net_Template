@@ -24,7 +24,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string ApiKey {get;set;}
 
-		 public string IsValid {get;set;}
+		 public bool IsValid {get;set;}
 
 	}
 }

@@ -18,22 +18,8 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public int UserProductAuthorizationId {get;set;}
 
- 		 public override int Key
-         {
-             get => this.UserId;
-             set => this.UserId = value;
-         }	
-
-		 [Key]
 		 public string UserId {get;set;}
 
- 		 public override int Key
-         {
-             get => this.ProduCategoryId;
-             set => this.ProduCategoryId = value;
-         }	
-
-		 [Key]
 		 public int ProduCategoryId {get;set;}
 
 		 public DateTime BeginTime {get;set;}
@@ -44,15 +30,15 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public DateTime UpdateTime {get;set;}
 
-		 public string IsValid {get;set;}
+		 public bool IsValid {get;set;}
 
-		 public string IsOrderUpdated {get;set;}
+		 public bool IsOrderUpdated {get;set;}
 
 		 public DateTime OrderUpdatedTime {get;set;}
 
-		 public string IsGrantAuthority {get;set;}
+		 public bool IsGrantAuthority {get;set;}
 
-		 public string IsStop {get;set;}
+		 public bool IsStop {get;set;}
 
 		 public DateTime StopDate {get;set;}
 

@@ -36,7 +36,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string TrueName {get;set;}
 
-		 public string Available {get;set;}
+		 public bool Available {get;set;}
 
 	}
 }

@@ -28,9 +28,9 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string UserID {get;set;}
 
-		 public string IsNew {get;set;}
+		 public bool IsNew {get;set;}
 
-		 public string Recycle {get;set;}
+		 public bool Recycle {get;set;}
 
 		 public string ResourceTagID {get;set;}
 

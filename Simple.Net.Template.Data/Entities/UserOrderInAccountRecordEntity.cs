@@ -24,13 +24,6 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string ApplyMoney {get;set;}
 
- 		 public override int Key
-         {
-             get => this.AccountTypeId;
-             set => this.AccountTypeId = value;
-         }	
-
-		 [Key]
 		 public int AccountTypeId {get;set;}
 
 		 public string AccountMoney {get;set;}

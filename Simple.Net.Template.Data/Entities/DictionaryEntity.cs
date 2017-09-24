@@ -18,24 +18,6 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public int DictionaryId {get;set;}
 
- 		 public override int Key
-         {
-             get => this.DictionaryId;
-             set => this.DictionaryId = value;
-         }	
-
-		 [Key]
-		 public int DictionaryId {get;set;}
-
- 		 public override int Key
-         {
-             get => this.DictionaryId;
-             set => this.DictionaryId = value;
-         }	
-
-		 [Key]
-		 public int DictionaryId {get;set;}
-
 		 public string ParentCode {get;set;}
 
 		 public string Name {get;set;}
@@ -46,9 +28,9 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int SerialNumber {get;set;}
 
-		 public string IsDeleted {get;set;}
+		 public bool IsDeleted {get;set;}
 
-		 public string IsMerchantDictionary {get;set;}
+		 public bool IsMerchantDictionary {get;set;}
 
 		 public DateTime CreateDate {get;set;}
 

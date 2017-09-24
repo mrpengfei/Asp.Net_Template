@@ -26,9 +26,9 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string Remark {get;set;}
 
-		 public string IsDeleted {get;set;}
+		 public bool IsDeleted {get;set;}
 
-		 public string MultiSelect {get;set;}
+		 public bool MultiSelect {get;set;}
 
 		 public int CompanyID {get;set;}
 
@@ -36,7 +36,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int GroupID {get;set;}
 
-		 public string IsPublic {get;set;}
+		 public bool IsPublic {get;set;}
 
 	}
 }

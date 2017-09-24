@@ -26,7 +26,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int Gender {get;set;}
 
-		 public string Available {get;set;}
+		 public bool Available {get;set;}
 
 		 public DateTime CreateTime {get;set;}
 
@@ -46,7 +46,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public DateTime DimissionTime {get;set;}
 
-		 public string IsManager {get;set;}
+		 public bool IsManager {get;set;}
 
 	}
 }

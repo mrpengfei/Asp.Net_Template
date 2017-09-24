@@ -30,7 +30,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public DateTime UpdateTime {get;set;}
 
-		 public string IsNew {get;set;}
+		 public bool IsNew {get;set;}
 
 		 public int CurrentResourceTypeID {get;set;}
 

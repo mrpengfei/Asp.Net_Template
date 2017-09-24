@@ -22,7 +22,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int ResourceSubTypeID {get;set;}
 
-		 public string IsOpen {get;set;}
+		 public bool IsOpen {get;set;}
 
 		 public DateTime CreateTime {get;set;}
 

@@ -20,7 +20,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string DiaryTypeName {get;set;}
 
-		 public string IsShow {get;set;}
+		 public bool IsShow {get;set;}
 
 	}
 }

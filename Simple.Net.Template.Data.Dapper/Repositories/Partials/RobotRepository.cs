@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Text;
 using Dapper.Contrib.Extensions;
 using Simple.Net.Template.Data.Entities;
-using Simple.Net.Template.Data.Repositories;
+using Simple.Net.Template.Data.IRepositories;
 
 
-namespace Novel.Core.Dapper.Repository
+namespace Simple.Net.Template.Data.Repositories
 {
-	public partial class RobotRepository :DapperRepository<RobotEntity>, IRobotRepository
+	public partial class RobotRepository :DapperRepository<RobotEntity,int>, IRobotRepository
 	{
 		public RobotRepository(ISessionManager session) : base(session)
         {

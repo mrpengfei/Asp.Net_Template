@@ -26,13 +26,13 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int EmployeeId {get;set;}
 
-		 public string Assigned {get;set;}
+		 public bool Assigned {get;set;}
 
-		 public string Handle {get;set;}
+		 public bool Handle {get;set;}
 
 		 public string TrueName {get;set;}
 
-		 public string UpdateTrueName {get;set;}
+		 public bool UpdateTrueName {get;set;}
 
 		 public int AddType {get;set;}
 

@@ -20,20 +20,13 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string UserId {get;set;}
 
- 		 public override int Key
-         {
-             get => this.ProduCategoryId;
-             set => this.ProduCategoryId = value;
-         }	
-
-		 [Key]
 		 public int ProduCategoryId {get;set;}
 
 		 public DateTime BeginTime {get;set;}
 
 		 public DateTime EndTime {get;set;}
 
-		 public string IsStop {get;set;}
+		 public bool IsStop {get;set;}
 
 		 public DateTime StopDate {get;set;}
 

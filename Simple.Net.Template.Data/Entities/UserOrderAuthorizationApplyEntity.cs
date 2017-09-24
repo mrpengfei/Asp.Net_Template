@@ -26,22 +26,8 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public DateTime EndDate {get;set;}
 
- 		 public override int Key
-         {
-             get => this.ServicesTypeId;
-             set => this.ServicesTypeId = value;
-         }	
-
-		 [Key]
 		 public int ServicesTypeId {get;set;}
 
- 		 public override int Key
-         {
-             get => this.ApplyStateId;
-             set => this.ApplyStateId = value;
-         }	
-
-		 [Key]
 		 public int ApplyStateId {get;set;}
 
 		 public string Description {get;set;}

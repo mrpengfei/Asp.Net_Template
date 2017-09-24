@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Text;
 using Dapper.Contrib.Extensions;
 using Simple.Net.Template.Data.Entities;
-using Simple.Net.Template.Data.Repositories;
+using Simple.Net.Template.Data.IRepositories;
 
 
-namespace Novel.Core.Dapper.Repository
+namespace Simple.Net.Template.Data.Repositories
 {
-	public partial class ProductRepository :DapperRepository<ProductEntity>, IProductRepository
+	public partial class ProductRepository :DapperRepository<ProductEntity,int>, IProductRepository
 	{
 		public ProductRepository(ISessionManager session) : base(session)
         {

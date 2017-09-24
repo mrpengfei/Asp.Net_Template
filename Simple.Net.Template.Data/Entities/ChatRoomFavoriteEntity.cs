@@ -28,7 +28,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public DateTime CreateDate {get;set;}
 
-		 public string IsDelete {get;set;}
+		 public bool IsDelete {get;set;}
 
 	}
 }

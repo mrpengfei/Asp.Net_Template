@@ -20,7 +20,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string WechatUin {get;set;}
 
-		 public string WechatState {get;set;}
+		 public bool WechatState {get;set;}
 
 		 public int ExceptionType {get;set;}
 

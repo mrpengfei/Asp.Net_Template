@@ -28,7 +28,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public DateTime PassTime {get;set;}
 
-		 public string IsPass {get;set;}
+		 public bool IsPass {get;set;}
 
 		 public DateTime CreateTime {get;set;}
 

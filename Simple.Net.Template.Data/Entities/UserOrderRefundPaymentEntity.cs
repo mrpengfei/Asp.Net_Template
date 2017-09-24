@@ -20,13 +20,6 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int UserOrderRefundId {get;set;}
 
- 		 public override int Key
-         {
-             get => this.PaymentTypeId;
-             set => this.PaymentTypeId = value;
-         }	
-
-		 [Key]
 		 public int PaymentTypeId {get;set;}
 
 		 public string PaymentName {get;set;}
@@ -43,7 +36,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string Remark {get;set;}
 
-		 public string PaymentMoney {get;set;}
+		 public decimal PaymentMoney {get;set;}
 
 	}
 }

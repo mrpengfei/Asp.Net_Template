@@ -22,7 +22,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int APPType {get;set;}
 
-		 public string IsNeedUpdate {get;set;}
+		 public bool IsNeedUpdate {get;set;}
 
 		 public string APPUrl {get;set;}
 

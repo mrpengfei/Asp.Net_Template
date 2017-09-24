@@ -22,17 +22,17 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int ResourceId {get;set;}
 
-		 public string IsPull {get;set;}
+		 public bool IsPull {get;set;}
 
-		 public string IsHasWechat {get;set;}
+		 public bool IsHasWechat {get;set;}
 
-		 public string IsAddWechatApply {get;set;}
+		 public bool IsAddWechatApply {get;set;}
 
-		 public string IsAddWechatSuccess {get;set;}
+		 public bool IsAddWechatSuccess {get;set;}
 
-		 public string IsDeleteWechat {get;set;}
+		 public bool IsDeleteWechat {get;set;}
 
-		 public string IsAddBlackList {get;set;}
+		 public bool IsAddBlackList {get;set;}
 
 		 public DateTime PullTime {get;set;}
 
@@ -58,7 +58,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int AddType {get;set;}
 
-		 public string IsHandle {get;set;}
+		 public bool IsHandle {get;set;}
 
 		 public DateTime HandleTime {get;set;}
 

@@ -18,13 +18,6 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string UserID {get;set;}
 
- 		 public override string Key
-         {
-             get => this.RiskTypeId;
-             set => this.RiskTypeId = value;
-         }	
-
-		 [Key]
 		 public int RiskTypeId {get;set;}
 
 	}

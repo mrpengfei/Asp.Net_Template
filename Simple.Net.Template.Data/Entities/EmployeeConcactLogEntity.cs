@@ -24,7 +24,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string ContactInfo {get;set;}
 
-		 public string Handled {get;set;}
+		 public bool Handled {get;set;}
 
 		 public DateTime CreateDate {get;set;}
 

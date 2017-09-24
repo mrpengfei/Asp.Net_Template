@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Text;
 using Dapper.Contrib.Extensions;
 using Simple.Net.Template.Data.Entities;
-using Simple.Net.Template.Data.Repositories;
+using Simple.Net.Template.Data.IRepositories;
 
 
-namespace Novel.Core.Dapper.Repository
+namespace Simple.Net.Template.Data.Repositories
 {
-	public partial class UserContactRepository :DapperRepository<UserContactEntity>, IUserContactRepository
+	public partial class UserContactRepository :DapperRepository<UserContactEntity,int>, IUserContactRepository
 	{
 		public UserContactRepository(ISessionManager session) : base(session)
         {

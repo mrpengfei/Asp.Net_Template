@@ -32,13 +32,13 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string wechatUid {get;set;}
 
-		 public string handle {get;set;}
+		 public bool handle {get;set;}
 
 		 public string UserId {get;set;}
 
-		 public string ImportPool {get;set;}
+		 public bool ImportPool {get;set;}
 
-		 public string AddRemark {get;set;}
+		 public bool AddRemark {get;set;}
 
 		 public int Type {get;set;}
 

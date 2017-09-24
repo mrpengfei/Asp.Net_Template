@@ -28,7 +28,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int EmployeeId {get;set;}
 
-		 public string IsNew {get;set;}
+		 public bool IsNew {get;set;}
 
 		 public DateTime CreateTime {get;set;}
 

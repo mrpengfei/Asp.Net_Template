@@ -6,10 +6,10 @@
 <#@ import namespace="System.Data" #>
 <#@ import namespace="System" #>
 <#@ include file="$(SolutionDir)\T4Common\ModelAuto.ttinclude"#>
-<#@ include file="$(SolutionDir)\T4Common\DbModel.ttinclude"#>
+<#@ include file="$(SolutionDir)\T4Common\DbModel.SqlServer.ttinclude"#>
 <# 
-	var nameSpace = "Novel.Core.Dapper.Repository";
-	var outputPath = Path.GetDirectoryName(Path.GetDirectoryName(Host.TemplateFile))+"\\Repository";
+	var nameSpace = "Simple.Net.Template.Data.Repositories";
+	var outputPath = Path.GetDirectoryName(Path.GetDirectoryName(Host.TemplateFile))+"\\Repositories";
 #>
 <# var manager = new Manager(Host,GenerationEnvironment,true)
 	{
@@ -20,7 +20,8 @@
 
 <# manager.StartBlock("RepositoryModule.cs"); #>
 using Autofac;
-using Novel.Core.Repository;
+using Simple.Net.Template.Data.IRepositories;
+using Simple.Net.Template.Data.Repositories;
 using System;
 
 
@@ -35,7 +36,7 @@ namespace <#= nameSpace #>
                 .InstancePerLifetimeScope();
 
 <# 
-    using (var dbManager = new SqliteDbModelManager(GetConnString()))
+    using (var dbManager = new SqlServerDbModelManager(GetConnString()))
     {
 		var tables = dbManager.GetTables();
         foreach (var item in tables)

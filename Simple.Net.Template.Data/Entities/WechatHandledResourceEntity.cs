@@ -20,7 +20,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int ResourceId {get;set;}
 
-		 public string IsPull {get;set;}
+		 public bool IsPull {get;set;}
 
 		 public DateTime CreateTime {get;set;}
 

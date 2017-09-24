@@ -1,11 +1,12 @@
 ﻿using Dapper.Contrib.Extensions;
-using Novel.Core.Repository;
+using Simple.Net.Template.Data;
 using Simple.Net.Template.Data.Entities;
+using Simple.Net.Template.Data.IRepositories;
 using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
 
-namespace Novel.Core.Dapper.Repository
+namespace Simple.Net.Template.Data.Repositories
 {
     public class DapperRepository : IRepository
     {

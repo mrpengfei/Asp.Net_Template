@@ -8,7 +8,7 @@
 <#@ include file="$(SolutionDir)\T4Common\ModelAuto.ttinclude"#>
 <#@ include file="$(SolutionDir)\T4Common\DbModel.SqlServer.ttinclude"#>
 <# 
-	var nameSpace = "Novel.Core.Repository";
+	var nameSpace = "Simple.Net.Template.Data.IRepositories";
 	var outputPath = Path.GetDirectoryName(Path.GetDirectoryName(Host.TemplateFile))+"\\IRepositories\\Partials";
 #>
 <# var manager = new Manager(Host,GenerationEnvironment,true)
@@ -26,6 +26,10 @@
             var className = GetClassName(item.Name,"Repository");
 			var entityName = GetClassName(item.Name);
 #>
+<#
+	var columns = dbManager.GetColumns(item.Name);
+	var pkType = GetPkType(columns);
+#>
 <# manager.StartBlock("I"+className+".cs"); #>
 using System;
 using System.Collections.Generic;
@@ -36,7 +40,7 @@ using Simple.Net.Template.Data.Entities;
 
 namespace <#= nameSpace #>
 {
-	public partial interface I<#= className #> : IRepository<<#= entityName #>>
+	public partial interface I<#= className #> : IRepository<<#= entityName #>,<#= pkType #>>
 	{
 	}
 }

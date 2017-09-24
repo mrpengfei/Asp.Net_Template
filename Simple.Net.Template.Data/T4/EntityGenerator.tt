@@ -33,11 +33,9 @@ using Dapper.Contrib.Extensions;
 
 <#
 	var columns = dbManager.GetColumns(item.Name);
-	var pkColumn = columns.FirstOrDefault(p=>p.Pk);
-	var pkType = "int";
-	if(pkColumn != null){
-		pkType = pkColumn.Type;
-	}
+	var pkType = GetPkType(columns);
+
+	
 #>
 
 namespace <#= nameSpace #>

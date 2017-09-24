@@ -18,7 +18,7 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public int UserExtId {get;set;}
 
-		 public string Integral {get;set;}
+		 public decimal Integral {get;set;}
 
 		 public int Level {get;set;}
 

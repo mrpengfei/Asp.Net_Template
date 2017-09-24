@@ -20,7 +20,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public int ResourceId {get;set;}
 
-		 public string IsWait {get;set;}
+		 public bool IsWait {get;set;}
 
 		 public DateTime UpdateTime {get;set;}
 

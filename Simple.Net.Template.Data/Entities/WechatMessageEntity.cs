@@ -36,15 +36,15 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public DateTime MessageTime {get;set;}
 
-		 public string IsSendMessage {get;set;}
+		 public bool IsSendMessage {get;set;}
 
 		 public string MessageState {get;set;}
 
-		 public string Result {get;set;}
+		 public bool Result {get;set;}
 
-		 public string IsCancel {get;set;}
+		 public bool IsCancel {get;set;}
 
-		 public string IsChatRoom {get;set;}
+		 public bool IsChatRoom {get;set;}
 
 		 public DateTime CreateTime {get;set;}
 

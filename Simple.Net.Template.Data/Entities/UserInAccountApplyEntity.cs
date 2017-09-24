@@ -18,26 +18,12 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public int UserInAccountApplyId {get;set;}
 
- 		 public override int Key
-         {
-             get => this.AccountTypeId;
-             set => this.AccountTypeId = value;
-         }	
-
-		 [Key]
 		 public int AccountTypeId {get;set;}
 
 		 public string IncomeMoney {get;set;}
 
 		 public string UserId {get;set;}
 
- 		 public override int Key
-         {
-             get => this.ApplyStateId;
-             set => this.ApplyStateId = value;
-         }	
-
-		 [Key]
 		 public int ApplyStateId {get;set;}
 
 		 public string Description {get;set;}

@@ -18,77 +18,28 @@ namespace Simple.Net.Template.Data.Entities
 		 [Key]
 		 public string UserOrderNo {get;set;}
 
- 		 public override string Key
-         {
-             get => this.UserID;
-             set => this.UserID = value;
-         }	
-
-		 [Key]
 		 public string UserID {get;set;}
 
- 		 public override string Key
-         {
-             get => this.ProduCategoryId;
-             set => this.ProduCategoryId = value;
-         }	
-
-		 [Key]
 		 public int ProduCategoryId {get;set;}
 
- 		 public override string Key
-         {
-             get => this.ProductId;
-             set => this.ProductId = value;
-         }	
-
-		 [Key]
 		 public int ProductId {get;set;}
 
- 		 public override string Key
-         {
-             get => this.OrderTypeId;
-             set => this.OrderTypeId = value;
-         }	
-
-		 [Key]
 		 public int OrderTypeId {get;set;}
 
 		 public string OrderTitle {get;set;}
 
 		 public string Description {get;set;}
 
- 		 public override string Key
-         {
-             get => this.OrderStateId;
-             set => this.OrderStateId = value;
-         }	
-
-		 [Key]
 		 public int OrderStateId {get;set;}
 
 		 public DateTime CreateTime {get;set;}
 
-		 public string OrderPrice {get;set;}
+		 public decimal OrderPrice {get;set;}
 
-		 public string OrderTruePrice {get;set;}
+		 public decimal OrderTruePrice {get;set;}
 
- 		 public override string Key
-         {
-             get => this.PaymentTypeId;
-             set => this.PaymentTypeId = value;
-         }	
-
-		 [Key]
 		 public int PaymentTypeId {get;set;}
 
- 		 public override string Key
-         {
-             get => this.EmployeeId;
-             set => this.EmployeeId = value;
-         }	
-
-		 [Key]
 		 public int EmployeeId {get;set;}
 
 		 public string FailureReason {get;set;}
@@ -97,7 +48,7 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string BelongTeacher {get;set;}
 
-		 public string DealLine {get;set;}
+		 public decimal DealLine {get;set;}
 
 		 public string IdNumber {get;set;}
 
@@ -115,59 +66,38 @@ namespace Simple.Net.Template.Data.Entities
 
 		 public string TradeNo {get;set;}
 
-		 public string IsUpdated {get;set;}
+		 public bool IsUpdated {get;set;}
 
 		 public DateTime UpdateTime {get;set;}
 
-		 public string IsCloseOldAuthorization {get;set;}
+		 public bool IsCloseOldAuthorization {get;set;}
 
- 		 public override string Key
-         {
-             get => this.OriginOrderProductCategoryId;
-             set => this.OriginOrderProductCategoryId = value;
-         }	
-
-		 [Key]
 		 public int OriginOrderProductCategoryId {get;set;}
 
-		 public string IsOpenAuthorization {get;set;}
+		 public bool IsOpenAuthorization {get;set;}
 
-		 public string IsNew {get;set;}
+		 public bool IsNew {get;set;}
 
-		 public string IsHasAccountApplication {get;set;}
+		 public bool IsHasAccountApplication {get;set;}
 
-		 public string IsHasIncome {get;set;}
+		 public bool IsHasIncome {get;set;}
 
- 		 public override string Key
-         {
-             get => this.ServicesTypeId;
-             set => this.ServicesTypeId = value;
-         }	
-
-		 [Key]
 		 public int ServicesTypeId {get;set;}
 
-		 public string TotalIncome {get;set;}
+		 public decimal TotalIncome {get;set;}
 
-		 public string IsHasAuthorizationApplication {get;set;}
+		 public bool IsHasAuthorizationApplication {get;set;}
 
-		 public string IsSignContract {get;set;}
+		 public bool IsSignContract {get;set;}
 
 		 public DateTime SignContractDate {get;set;}
 
-		 public string IsAssignedServiceEmployee {get;set;}
+		 public bool IsAssignedServiceEmployee {get;set;}
 
-		 public string IsRefund {get;set;}
+		 public bool IsRefund {get;set;}
 
-		 public string RefundMoney {get;set;}
+		 public decimal RefundMoney {get;set;}
 
- 		 public override string Key
-         {
-             get => this.RefundStateId;
-             set => this.RefundStateId = value;
-         }	
-
-		 [Key]
 		 public int RefundStateId {get;set;}
 
 	}
